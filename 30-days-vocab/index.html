@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Ngày Từ Vựng ETS – TOEIC Study Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- <a class="navbar-back" href="../index.html">← Trang chủ</a> -->
+      <span class="navbar-spacer"></span>
+      <span class="navbar-title">30 Ngày Từ Vựng ETS</span>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-icon">📖</div>
+      <h1>30 Ngày Từ Vựng ETS</h1>
+      <p>
+        Chọn một ngày để bắt đầu học từ vựng theo chủ đề – và kiểm tra lại kiến
+        thức với Matching Quiz.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="grid-header">
+        <h2 id="progress-text">30 chủ đề</h2>
+      </div>
+      <div class="days-grid" id="daysGrid"></div>
+    </div>
+
+    <script src="data/topics.js"></script>
+    <script>
+      const grid = document.getElementById("daysGrid");
+
+      DAYS_TOPICS.forEach(({ day, topic, topicVi, icon }) => {
+        const card = document.createElement("div");
+        card.className = "day-card";
+        card.innerHTML = `
+        <span class="day-card-number">Ngày ${day}</span>
+        <span class="day-card-icon">${icon}</span>
+        <div class="day-card-topic">${topic}</div>
+        <div class="day-card-topic-vi">${topicVi}</div>
+      `;
+        card.addEventListener("click", () => {
+          window.location.href = `day.html?day=${day}`;
+        });
+        grid.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

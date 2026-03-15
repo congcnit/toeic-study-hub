@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day – 30 Ngày Từ Vựng ETS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a class="navbar-back" href="index.html">← Danh sách</a>
+    <span class="navbar-spacer"></span>
+    <span class="navbar-title" id="navTitle">Từ vựng</span>
+  </nav>
+
+  <div class="container">
+    <div class="day-header">
+      <div class="day-header-left">
+        <span class="day-icon-large" id="dayIcon"></span>
+        <div class="day-header-title">
+          <h2 id="dayTitle"></h2>
+          <p id="daySubtitle"></p>
+        </div>
+      </div>
+      <a class="btn-quiz" id="quizBtn" href="#">🎯 Kiểm tra từ vựng</a>
+    </div>
+
+    <div class="vocab-list" id="vocabList"></div>
+  </div>
+
+  <script src="data/topics.js"></script>
+  <script>
+    const params  = new URLSearchParams(window.location.search);
+    const dayNum  = parseInt(params.get('day')) || 1;
+    const dayInfo = DAYS_TOPICS.find(d => d.day === dayNum) || DAYS_TOPICS[0];
+
+    // Dynamically load the day's vocabulary file, then render
+    const script = document.createElement('script');
+    script.src   = `data/day-${String(dayNum).padStart(2,'0')}.js`;
+    script.onload = renderPage;
+    script.onerror = () => renderPage();
+    document.head.appendChild(script);
+
+    function renderPage() {
+      const words = (typeof DAY_VOCAB !== 'undefined') ? DAY_VOCAB : [];
+
+    // ---- HEAD ----
+    document.title = `Day ${dayNum}: ${dayInfo.topic} – 30 Ngày Từ Vựng ETS`;
+    document.getElementById('navTitle').textContent    = `Ngày ${dayNum}: ${dayInfo.topic}`;
+    document.getElementById('dayIcon').textContent     = dayInfo.icon;
+    document.getElementById('dayTitle').textContent    = `Ngày ${dayNum}: ${dayInfo.topic}`;
+    document.getElementById('daySubtitle').textContent = `${dayInfo.topicVi} · ${words.length} từ`;
+    document.getElementById('quizBtn').href            = `quiz.html?day=${dayNum}`;
+
+    // ---- POS labels ----
+    const posLabel = { n: 'danh từ', v: 'động từ', adj: 'tính từ', adv: 'trạng từ', 'n/v': 'danh/động từ', 'adj/n': 'tính từ/danh từ', prep: 'giới từ', conj: 'liên từ', phr: 'cụm từ' };
+
+    // ---- RENDER ----
+    const list = document.getElementById('vocabList');
+
+    words.forEach((w, i) => {
+      const card = document.createElement('div');
+      card.className = 'word-card';
+
+      const related = w.related && w.related.length
+        ? `<div class="word-related">
+             <span class="related-label">Từ liên quan:</span>
+             <span class="related-words">${w.related.join(', ')}</span>
+           </div>`
+        : '';
+
+      const phrases = w.phrases && w.phrases.length
+        ? `<div class="section-label">🔗 Cụm thông dụng</div>
+           <div class="phrases-block">
+             ${w.phrases.map(p =>
+               `<div class="phrase-item">
+                  <span class="phrase-en">${p.en}</span>
+                  <span class="phrase-vi">→ ${p.vi}</span>
+                </div>`
+             ).join('')}
+           </div>`
+        : '';
+
+      const note = w.note
+        ? `<div class="note-block">
+             <strong>📌 Ghi chú:</strong> ${w.note}
+           </div>`
+        : '';
+
+      card.innerHTML = `
+        <div class="word-card-header">
+          <span class="word-card-number">${i + 1}</span>
+          <span class="word-title">${w.word}</span>
+          <span class="word-phonetic">${w.phonetic}</span>
+          <span class="word-pos-badge">${w.pos} · ${posLabel[w.pos] || w.pos}</span>
+        </div>
+        <div class="word-card-body">
+          <div style="font-size:1.15rem;font-weight:700;color:#1a3a5c;margin-bottom:12px;">
+            ${w.meaning}
+          </div>
+          ${related}
+          <div class="word-example">
+            <div class="en">💬 ${w.example}</div>
+            <div class="vi">${w.exampleVi}</div>
+          </div>
+          ${phrases}
+          ${note}
+        </div>
+      `;
+      list.appendChild(card);
+    });
+
+    if (!words.length) {
+      list.innerHTML = '<p style="color:#6b7a8d;padding:32px 0;text-align:center;">Dữ liệu từ vựng cho ngày này chưa được cập nhật.</p>';
+    }
+    } // end renderPage
+  </script>
+</body>
+</html>

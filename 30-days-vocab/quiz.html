@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – 30 Ngày Từ Vựng ETS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a class="navbar-back" id="backBtn" href="index.html">← Từ vựng</a>
+    <span class="navbar-spacer"></span>
+    <span class="navbar-title" id="navTitle">Kiểm tra từ vựng</span>
+  </nav>
+
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h2 id="quizTitle">Kiểm tra từ vựng</h2>
+      <p id="quizSubtitle">Ghép từ tiếng Anh với nghĩa tiếng Việt tương ứng.</p>
+    </div>
+
+    <div class="quiz-score-bar">
+      <span class="score-label">Tiến độ:</span>
+      <span class="score-value" id="scoreDisplay">0 / 0</span>
+      <div class="score-progress">
+        <div class="score-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <span id="roundInfo" style="font-size:.82rem;color:#6b7a8d;white-space:nowrap;"></span>
+    </div>
+
+    <div class="match-section" id="matchSection">
+      <div>
+        <div class="match-column-label">Từ tiếng Anh</div>
+        <div class="match-items" id="wordsCol"></div>
+      </div>
+      <div>
+        <div class="match-column-label">Nghĩa tiếng Việt</div>
+        <div class="match-items" id="meaningsCol"></div>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-primary" id="nextRoundBtn" style="display:none">
+        Vòng tiếp theo →
+      </button>
+      <a class="btn-secondary" id="reviewBtn" href="#">📖 Xem lại từ vựng</a>
+      <a class="btn-secondary" href="index.html">← Chọn ngày khác</a>
+    </div>
+
+    <div class="quiz-result" id="quizResult">
+      <div class="result-emoji" id="resultEmoji">🎉</div>
+      <div class="result-title" id="resultTitle"></div>
+      <div class="result-sub" id="resultSub"></div>
+      <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-primary" id="restartBtn">🔄 Làm lại</button>
+        <a class="btn-secondary" href="index.html">← Chọn ngày khác</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/topics.js"></script>
+  <script>
+    // ---- INIT ----
+    const params  = new URLSearchParams(window.location.search);
+    const dayNum  = parseInt(params.get('day')) || 1;
+    const dayInfo = DAYS_TOPICS.find(d => d.day === dayNum) || DAYS_TOPICS[0];
+
+    // Load per-day vocab file then start quiz
+    const _s = document.createElement('script');
+    _s.src   = `data/day-${String(dayNum).padStart(2,'0')}.js`;
+    _s.onload = initQuiz;
+    _s.onerror = initQuiz;
+    document.head.appendChild(_s);
+
+    let allWords = [];
+    function initQuiz() {
+      allWords = (typeof DAY_VOCAB !== 'undefined') ? [...DAY_VOCAB] : [];
+
+    document.title              = `Quiz Ngày ${dayNum} – 30 Ngày Từ Vựng ETS`;
+    document.getElementById('navTitle').textContent   = `Quiz · Ngày ${dayNum}`;
+    document.getElementById('quizTitle').textContent  = `${dayInfo.icon} Quiz: Ngày ${dayNum} – ${dayInfo.topic}`;
+    document.getElementById('backBtn').href           = `day.html?day=${dayNum}`;
+    document.getElementById('reviewBtn').href         = `day.html?day=${dayNum}`;
+
+    // ---- STATE ----
+    const ROUND_SIZE   = 6; // words per round
+    let rounds         = [];
+    let currentRound   = 0;
+    let totalMatched   = 0;
+    let roundMatched   = 0;
+
+    let selectedWord   = null;
+    let selectedMeaning= null;
+
+    // ---- BUILD ROUNDS ----
+    function buildRounds() {
+      const shuffled = [...allWords].sort(() => Math.random() - .5);
+      rounds = [];
+      for (let i = 0; i < shuffled.length; i += ROUND_SIZE) {
+        rounds.push(shuffled.slice(i, i + ROUND_SIZE));
+      }
+    }
+
+    function shuffle(arr) {
+      return [...arr].sort(() => Math.random() - .5);
+    }
+
+    // ---- RENDER ROUND ----
+    function renderRound(round) {
+      roundMatched = 0;
+      selectedWord = null;
+      selectedMeaning = null;
+
+      const wordsCol    = document.getElementById('wordsCol');
+      const meaningsCol = document.getElementById('meaningsCol');
+      wordsCol.innerHTML    = '';
+      meaningsCol.innerHTML = '';
+
+      document.getElementById('nextRoundBtn').style.display = 'none';
+
+      const words    = shuffle(round.map(w => w.word));
+      const meanings = shuffle(round.map(w => ({ key: w.word, text: w.meaning })));
+
+      words.forEach(word => {
+        const el = document.createElement('div');
+        el.className   = 'match-item';
+        el.textContent = word;
+        el.dataset.key = word;
+        el.dataset.type= 'word';
+        el.addEventListener('click', () => handleClick(el, 'word'));
+        wordsCol.appendChild(el);
+      });
+
+      meanings.forEach(m => {
+        const el = document.createElement('div');
+        el.className   = 'match-item';
+        el.textContent = m.text;
+        el.dataset.key = m.key;
+        el.dataset.type= 'meaning';
+        el.addEventListener('click', () => handleClick(el, 'meaning'));
+        meaningsCol.appendChild(el);
+      });
+
+      updateRoundInfo();
+    }
+
+    // ---- CLICK HANDLER ----
+    function handleClick(el, type) {
+      if (el.classList.contains('matched') || el.classList.contains('dimmed')) return;
+
+      if (type === 'word') {
+        if (selectedWord) selectedWord.classList.remove('selected');
+        if (selectedWord === el) { selectedWord = null; return; }
+        selectedWord = el;
+        el.classList.add('selected');
+      } else {
+        if (selectedMeaning) selectedMeaning.classList.remove('selected');
+        if (selectedMeaning === el) { selectedMeaning = null; return; }
+        selectedMeaning = el;
+        el.classList.add('selected');
+      }
+
+      if (selectedWord && selectedMeaning) {
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      const wKey = selectedWord.dataset.key;
+      const mKey = selectedMeaning.dataset.key;
+
+      if (wKey === mKey) {
+        // Correct
+        selectedWord.classList.remove('selected');
+        selectedMeaning.classList.remove('selected');
+        selectedWord.classList.add('matched');
+        selectedMeaning.classList.add('matched');
+        selectedWord.innerHTML    += ' ✓';
+        selectedMeaning.innerHTML += ' ✓';
+        totalMatched++;
+        roundMatched++;
+        selectedWord = null;
+        selectedMeaning = null;
+        updateScore();
+
+        if (roundMatched === rounds[currentRound].length) {
+          onRoundComplete();
+        }
+      } else {
+        // Wrong
+        const w = selectedWord, m = selectedMeaning;
+        w.classList.add('incorrect');
+        m.classList.add('incorrect');
+        setTimeout(() => {
+          w.classList.remove('incorrect', 'selected');
+          m.classList.remove('incorrect', 'selected');
+          selectedWord = null;
+          selectedMeaning = null;
+        }, 700);
+      }
+    }
+
+    function onRoundComplete() {
+      const isLast = currentRound >= rounds.length - 1;
+      if (isLast) {
+        showFinalResult();
+      } else {
+        const btn = document.getElementById('nextRoundBtn');
+        btn.style.display = 'flex';
+        btn.textContent = `Vòng tiếp theo (${currentRound + 2}/${rounds.length}) →`;
+      }
+    }
+
+    document.getElementById('nextRoundBtn').addEventListener('click', () => {
+      currentRound++;
+      renderRound(rounds[currentRound]);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- SCORE ----
+    function updateScore() {
+      const total = allWords.length;
+      document.getElementById('scoreDisplay').textContent = `${totalMatched} / ${total}`;
+      document.getElementById('progressFill').style.width = `${(totalMatched / total) * 100}%`;
+    }
+
+    function updateRoundInfo() {
+      document.getElementById('roundInfo').textContent =
+        rounds.length > 1 ? `Vòng ${currentRound + 1}/${rounds.length}` : '';
+    }
+
+    // ---- FINAL ----
+    function showFinalResult() {
+      const total = allWords.length;
+      const pct   = Math.round((totalMatched / total) * 100);
+      const resultEl = document.getElementById('quizResult');
+      let emoji = '🎉', title = 'Xuất sắc!', sub = '';
+
+      if (pct === 100)      { emoji = '🏆'; title = 'Hoàn hảo! Bạn nhớ tất cả từ vựng!'; }
+      else if (pct >= 80)   { emoji = '🎉'; title = 'Rất tốt! Cố gắng thêm để đạt 100%.'; }
+      else if (pct >= 60)   { emoji = '👍'; title = 'Khá tốt! Ôn lại những từ còn sai nhé.'; }
+      else                  { emoji = '📚'; title = 'Cần ôn thêm! Hãy xem lại từ vựng.'; }
+
+      sub = `Bạn đã ghép đúng ${totalMatched}/${total} từ (${pct}%)`;
+      document.getElementById('resultEmoji').textContent = emoji;
+      document.getElementById('resultTitle').textContent = title;
+      document.getElementById('resultSub').textContent   = sub;
+      resultEl.classList.add('show');
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    document.getElementById('restartBtn').addEventListener('click', () => {
+      totalMatched = 0;
+      currentRound = 0;
+      document.getElementById('quizResult').classList.remove('show');
+      updateScore();
+      buildRounds();
+      renderRound(rounds[0]);
+    });
+
+      // ---- START ----
+      if (allWords.length === 0) {
+        document.getElementById('matchSection').innerHTML =
+          '<p style="color:#6b7a8d;text-align:center;padding:32px 0;grid-column:1/-1">Chưa có dữ liệu từ vựng cho ngày này.</p>';
+      } else {
+        buildRounds();
+        updateScore();
+        renderRound(rounds[0]);
+      }
+    } // end initQuiz
+  </script>
+</body>
+</html>
