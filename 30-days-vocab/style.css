@@ -77,7 +77,44 @@ a { text-decoration: none; color: inherit; }
 .navbar-spacer { flex: 1; }
 .navbar-title {
   font-size: .95rem;
-  opacity: .85;
+  font-weight: 600;
+  opacity: .9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+  text-align: center;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.navbar-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background var(--transition);
+  white-space: nowrap;
+  line-height: 1;
+}
+.navbar-nav-btn:hover  { background: rgba(255,255,255,.28); }
+.navbar-nav-btn.disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  .navbar-nav-btn .btn-label { display: none; }
+  .navbar-nav-btn { padding: 6px 9px; }
+  .navbar-title { max-width: 120px; }
 }
 
 /* ===== PAGE HERO ===== */

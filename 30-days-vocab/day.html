@@ -11,6 +11,17 @@
     <a class="navbar-back" href="index.html">← Danh sách</a>
     <span class="navbar-spacer"></span>
     <span class="navbar-title" id="navTitle">Từ vựng</span>
+    <span class="navbar-spacer"></span>
+    <div class="navbar-nav">
+      <a class="navbar-nav-btn" id="prevDayBtn" aria-label="Ngày trước">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span class="btn-label">Trước</span>
+      </a>
+      <a class="navbar-nav-btn" id="nextDayBtn" aria-label="Ngày tiếp">
+        <span class="btn-label">Tiếp</span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
   </nav>
 
   <div class="container">
@@ -55,6 +66,14 @@
     document.getElementById('dayTitle').textContent    = `Ngày ${dayNum}: ${dayInfo.topic}`;
     document.getElementById('daySubtitle').textContent = `${dayInfo.topicVi} · ${words.length} từ`;
     document.getElementById('quizBtn').href            = `quiz.html?day=${dayNum}`;
+
+    const totalDays = DAYS_TOPICS.length;
+    const prevBtn   = document.getElementById('prevDayBtn');
+    const nextBtn   = document.getElementById('nextDayBtn');
+    if (dayNum > 1)          prevBtn.href = `day.html?day=${dayNum - 1}`;
+    else                     prevBtn.classList.add('disabled');
+    if (dayNum < totalDays)  nextBtn.href = `day.html?day=${dayNum + 1}`;
+    else                     nextBtn.classList.add('disabled');
 
     // ---- POS labels ----
     const posLabel = { n: 'danh từ', v: 'động từ', adj: 'tính từ', adv: 'trạng từ', 'n/v': 'danh/động từ', 'adj/n': 'tính từ/danh từ', prep: 'giới từ', conj: 'liên từ', phr: 'cụm từ' };
