@@ -5,7 +5,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkɒnfɪdəns/",
     pos: "n",
     meaning: "lòng tin, sự tự tin",
-    related: ["confident"],
+    related: [{ word: "confident", pos: "adj", meaning: "tự tin" }],
     example:
       "Consumers have a lot of confidence in our stoves and refrigerators.",
     exampleVi:
@@ -27,7 +27,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌekspekˈteɪʃn/",
     pos: "n",
     meaning: "sự mong đợi",
-    related: ["expect", "expectations"],
+    related: [{ word: "expect", pos: "v", meaning: "mong đợi; dự kiến" }, { word: "expectations", pos: "n", meaning: "kỳ vọng" }],
     example: "We hope this refrigerator will exceed your expectations.",
     exampleVi: "Chúng tôi hy vọng tủ lạnh này sẽ vượt mong đợi của bạn.",
     phrases: [
@@ -72,7 +72,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌmɒdɪfɪˈkeɪʃn/",
     pos: "n",
     meaning: "sửa đổi",
-    related: ["modify"],
+    related: [{ word: "modify", pos: "v", meaning: "sửa đổi" }],
     example:
       "Many car enthusiasts like to make unique modifications to their vehicles.",
     exampleVi:
@@ -94,7 +94,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈneɡlɪdʒəns/",
     pos: "n",
     meaning: "sự sơ suất",
-    related: ["negligent"],
+    related: [{ word: "negligent", pos: "adj", meaning: "cẩu thả, bất cẩn" }],
     example:
       "The company is liable for negligence, so the customer will be compensated for the damage.",
     exampleVi:
@@ -107,7 +107,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈrɪdʒənl/",
     pos: "adj",
     meaning: "nguyên gốc; ban đầu",
-    related: ["origin"],
+    related: [{ word: "origin", pos: "n", meaning: "nguồn gốc" }],
     example: "This mobile phone is an updated version of the original model.",
     exampleVi:
       "Điện thoại di động này là một phiên bản cập nhật của mẫu ban đầu.",
@@ -148,7 +148,7 @@ const DAY_VOCAB = [
     phonetic: "/pəˈfɔːm/",
     pos: "v",
     meaning: "thực hiện; biểu diễn; hoạt động (tốt)",
-    related: ["performance"],
+    related: [{ word: "performance", pos: "n", meaning: "thành tích; buổi biểu diễn" }],
     example:
       "The battery in our newest mobile phone performs better than those in similar products.",
     exampleVi:
@@ -174,7 +174,7 @@ const DAY_VOCAB = [
     phonetic: "/sɒlv/",
     pos: "v",
     meaning: "giải quyết",
-    related: ["solution"],
+    related: [{ word: "solution", pos: "n", meaning: "giải pháp; dung dịch" }],
     example:
       "You will find the manual very helpful in solving any problems you encounter.",
     exampleVi:
@@ -187,7 +187,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌɔːltəˈreɪʃn/",
     pos: "n",
     meaning: "sự thay đổi",
-    related: ["alter"],
+    related: [{ word: "alter", pos: "v", meaning: "thay đổi, biến đổi" }],
     example:
       "This warranty does not cover any damage resulting from alterations made by the user.",
     exampleVi:
@@ -222,7 +222,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈweər/",
     pos: "adj",
     meaning: "biết; lưu ý",
-    related: ["awareness"],
+    related: [{ word: "awareness", pos: "n", meaning: "nhận thức" }],
     example: "We are aware that our warranty expired a year ago.",
     exampleVi:
       "Chúng tôi biết rằng bảo hành của chúng tôi đã hết hạn một năm trước.",
@@ -249,7 +249,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌkɒmbɪˈneɪʃn/",
     pos: "n",
     meaning: "sự kết hợp",
-    related: ["combine", "combined"],
+    related: [{ word: "combine", pos: "v", meaning: "kết hợp" }, { word: "combined", pos: "adj", meaning: "kết hợp" }],
     example:
       "Everclear headphones offer the best combination of comfort and high-quality audio.",
     exampleVi:
@@ -265,7 +265,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌkɒmplɪˈkeɪʃn/",
     pos: "n",
     meaning: "sự phức tạp; biến chứng",
-    related: ["complicated"],
+    related: [{ word: "complicated", pos: "adj", meaning: "phức tạp" }],
     example:
       "I have begun to have some complications with a few features on the camera.",
     exampleVi:
@@ -301,7 +301,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkʌvərɪdʒ/",
     pos: "n",
     meaning: "sự bảo hiểm; sự tường thuật; phủ sóng",
-    related: ["cover", "covered"],
+    related: [{ word: "cover", pos: "v/n", meaning: "(v) bảo hiểm; chi trả; tường thuật; (n) bìa sách" }, { word: "covered", pos: "adj", meaning: "được bao phủ" }],
     example:
       "It is with great pride that I announce that our mobile telephone coverage area has grown.",
     exampleVi:
@@ -336,7 +336,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈfektɪv/",
     pos: "adj",
     meaning: "có khuyết điểm",
-    related: ["defectively"],
+    related: [{ word: "defectively", pos: "adv", meaning: "một cách khiếm khuyết" }],
     example:
       "The store will repair or replace defective products within the warranty period.",
     exampleVi:
@@ -355,7 +355,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌekspɪˈreɪʃn/",
     pos: "n",
     meaning: "sự hết hạn",
-    related: ["expire", "expired"],
+    related: [{ word: "expire", pos: "v", meaning: "hết hiệu lực" }, { word: "expired", pos: "adj", meaning: "đã hết hạn" }],
     example: "Please check the expiration date on the package before use.",
     exampleVi: "Vui lòng kiểm tra ngày hết hạn trên bao bì trước khi sử dụng.",
     phrases: [{ en: "expiration date", vi: "ngày hết hạn" }],
@@ -480,7 +480,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈrɪɡərəs/",
     pos: "adj",
     meaning: "nghiêm ngặt (quy định, quy trình)",
-    related: ["rigorously", "rigor"],
+    related: [{ word: "rigorously", pos: "adv", meaning: "một cách nghiêm ngặt" }, { word: "rigor", pos: "n", meaning: "sự nghiêm ngặt, khắt khe" }],
     example:
       "Siesna Electronics products meet rigorous technical specifications.",
     exampleVi:
@@ -493,7 +493,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈseɪfli/",
     pos: "adv",
     meaning: "một cách an toàn",
-    related: ["safe"],
+    related: [{ word: "safe", pos: "adj", meaning: "an toàn" }],
     example:
       "Your digital files will remain stored safely on our online server.",
     exampleVi:
@@ -506,7 +506,7 @@ const DAY_VOCAB = [
     phonetic: "/ʃrɪŋk/",
     pos: "v",
     meaning: "co lại (quần áo); thu hẹp, suy yếu (thị trường, nền kinh tế)",
-    related: ["shrinkage", "shrinkable", "shrinking"],
+    related: [{ word: "shrinkage", pos: "n", meaning: "sự co rút" }, { word: "shrinkable", pos: "adj", meaning: "có thể co lại" }, { word: "shrinking", pos: "adj", meaning: "đang co lại" }],
     example:
       "The manufacturer guarantees to replace any item of clothing which shrinks after being washed.",
     exampleVi:
@@ -519,7 +519,7 @@ const DAY_VOCAB = [
     phonetic: "/səkˈseʃn/",
     pos: "n",
     meaning: "sự kế tiếp; chuỗi (theo thứ tự)",
-    related: ["succeed", "successive", "successful"],
+    related: [{ word: "succeed", pos: "v", meaning: "thành công; kế nhiệm" }, { word: "successive", pos: "adj", meaning: "liên tiếp" }, { word: "successful", pos: "adj", meaning: "thành công" }],
     example:
       "Attach the pieces in quick succession, before the glue has time to dry.",
     exampleVi: "Gắn các mảnh nối tiếp nhau nhanh, trước khi keo kịp khô.",
@@ -534,7 +534,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈsʌplɪment/",
     pos: "v/n",
     meaning: "(v) bổ sung; (n) phần bổ sung",
-    related: ["supplementary"],
+    related: [{ word: "supplementary", pos: "adj", meaning: "bổ sung" }],
     example:
       "Many people supplement their diet with multi-vitamins in order to stay as healthy as possible.",
     exampleVi:
@@ -560,7 +560,7 @@ const DAY_VOCAB = [
     phonetic: "/tend/",
     pos: "v",
     meaning: "có xu hướng",
-    related: ["tendency"],
+    related: [{ word: "tendency", pos: "n", meaning: "xu hướng" }],
     example:
       "When comparing similarly priced products, consumers tend to favor the less expensive item.",
     exampleVi:
@@ -582,7 +582,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈtraɪəl/",
     pos: "n",
     meaning: "dùng thử",
-    related: ["try", "tried", "trying"],
+    related: [{ word: "try", pos: "v", meaning: "cố gắng; thử" }, { word: "tried", pos: "adj", meaning: "đã thử; đã được chứng minh" }, { word: "trying", pos: "adj", meaning: "đang thử; vất vả, khó chịu" }],
     example:
       "The license for the trial version of Exi 2.0 software is valid for the 30-day period.",
     exampleVi:
@@ -618,7 +618,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈtɪndʒənsi/",
     pos: "n",
     meaning: "tình huống bất ngờ",
-    related: ["contingent"],
+    related: [{ word: "contingent", pos: "n/adj", meaning: "phụ thuộc vào điều kiện; đội ngũ" }],
     example:
       "The company has several contingency plans if the launch of the new product is not successful.",
     exampleVi:
@@ -640,7 +640,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌɪnsəˈfɪʃnt/",
     pos: "adj",
     meaning: "không đủ",
-    related: ["insufficiency", "insufficiently"],
+    related: [{ word: "insufficiency", pos: "n", meaning: "sự không đủ" }, { word: "insufficiently", pos: "adv", meaning: "không đủ" }],
     example:
       "The number of technicians available to assist customers is now insufficient.",
     exampleVi: "Số kỹ thuật viên có sẵn để hỗ trợ khách hàng hiện không đủ.",

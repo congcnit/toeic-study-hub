@@ -22,7 +22,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈlɜːdʒɪk/",
     pos: "adj",
     meaning: "gây dị ứng",
-    related: ["allergy"],
+    related: [{ word: "allergy", pos: "n", meaning: "dị ứng" }],
     example: "Some foods cause allergic reactions in certain people.",
     exampleVi: "Một số thực phẩm gây phản ứng dị ứng ở một số người.",
     phrases: [],
@@ -33,7 +33,7 @@ const DAY_VOCAB = [
     phonetic: "/kləʊz/",
     pos: "adj/v",
     meaning: "gần; thân thiết (adj) / đóng cửa, ngăn cách (v)",
-    related: ["closely"],
+    related: [{ word: "closely", pos: "adv", meaning: "sát sao, chặt chẽ" }],
     example:
       "Hotel Bella is close to public transportation, the theaters and the museums.",
     exampleVi:
@@ -51,7 +51,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkʌmftəbli/",
     pos: "adv",
     meaning: "thoải mái",
-    related: ["comfortable", "comfort"],
+    related: [{ word: "comfortable", pos: "adj", meaning: "thoải mái" }, { word: "comfort", pos: "n/v", meaning: "sự thoải mái; an ủi" }],
     example:
       "The Captain's Seafood Restaurant can comfortably seat up to 20 guests in its Starboard Lounge.",
     exampleVi:
@@ -91,7 +91,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈrekʃnz/",
     pos: "n",
     meaning: "hướng dẫn (đường đi)",
-    related: ["direct", "directly"],
+    related: [{ word: "direct", pos: "adj/v", meaning: "(adj) trực tiếp; thẳng thắn; (v) chuyển (câu hỏi, thư...)" }, { word: "directly", pos: "adv", meaning: "trực tiếp" }],
     example:
       "Directions to the hotel will be available at the car rental desk.",
     exampleVi:
@@ -123,7 +123,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfreʃnəs/",
     pos: "n",
     meaning: "độ tươi (thực phẩm; không khí;...)",
-    related: ["fresh", "freshen", "freshly"],
+    related: [{ word: "fresh", pos: "adj", meaning: "tươi, mới" }, { word: "freshen", pos: "v", meaning: "làm tươi mới" }, { word: "freshly", pos: "adv", meaning: "một cách tươi mới" }],
     example:
       "The freshness of the local seafood varies depending upon the supplier.",
     exampleVi: "Độ tươi của hải sản địa phương thay đổi tùy theo nhà cung cấp.",
@@ -138,7 +138,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfrəʊzən/",
     pos: "adj",
     meaning: "(thực phẩm) đông lạnh",
-    related: ["freeze"],
+    related: [{ word: "freeze", pos: "v/n", meaning: "đóng băng" }],
     example: "The company is known for its frozen dinners and pastries.",
     exampleVi: "Công ty nổi tiếng với các bữa ăn tối và bánh ngọt đông lạnh.",
     phrases: [],
@@ -149,7 +149,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈdʒenəreɪt/",
     pos: "v",
     meaning: "tạo ra (điện; thu nhập; lợi nhuận;...)",
-    related: ["generation", "generator"],
+    related: [{ word: "generation", pos: "n", meaning: "thế hệ; sự tạo ra" }, { word: "generator", pos: "n", meaning: "máy phát điện" }],
     example:
       "The restaurant has generated excitement because of the international reputation of its chef.",
     exampleVi:
@@ -188,7 +188,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈliːdɪŋ/",
     pos: "adj",
     meaning: "(công ty) hàng đầu",
-    related: ["lead"],
+    related: [{ word: "lead", pos: "v", meaning: "dẫn dắt" }],
     example: "Ms Morin has become one of Montreal's leading business people.",
     exampleVi:
       "Bà Morin đã trở thành một trong những doanh nhân hàng đầu của Montreal.",
@@ -222,7 +222,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈpraɪər tuː/",
     pos: "prep",
     meaning: "trước",
-    related: ["prior", "priority"],
+    related: [{ word: "prior", pos: "adj", meaning: "trước đó; ưu tiên" }, { word: "priority", pos: "n", meaning: "sự ưu tiên" }],
     example:
       "Any changes to your reservation should be made at least three days prior to your arrival.",
     exampleVi:
@@ -252,7 +252,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌrezəˈveɪʃn/",
     pos: "n",
     meaning: "sự đặt phòng",
-    related: ["reserve", "reserved"],
+    related: [{ word: "reserve", pos: "v", meaning: "đặt chỗ" }, { word: "reserved", pos: "adj", meaning: "được đặt trước; dè dặt" }],
     example:
       "As we discussed, room reservations have been made at the Mahalo hotel.",
     exampleVi:
@@ -269,7 +269,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈspesɪfaɪ/",
     pos: "v",
     meaning: "chỉ rõ",
-    related: ["specific", "specification"],
+    related: [{ word: "specific", pos: "adj", meaning: "cụ thể" }, { word: "specification", pos: "n", meaning: "thông số kỹ thuật; bản mô tả chi tiết" }],
     example:
       "Customers of Millor Catering should specify any special dietary needs they may have.",
     exampleVi:
@@ -287,7 +287,7 @@ const DAY_VOCAB = [
     phonetic: "/teɪst/",
     pos: "n/v",
     meaning: "mùi vị; thị hiếu (n) / nếm (v)",
-    related: ["tasty"],
+    related: [{ word: "tasty", pos: "adj", meaning: "ngon" }],
     example:
       "The Aquapedra A5 water filter improves the taste and quality of drinking water.",
     exampleVi:
@@ -314,7 +314,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈdʒeɪsnt/",
     pos: "adj",
     meaning: "lân cận, kề nhau",
-    related: ["adjacency", "adjacently"],
+    related: [{ word: "adjacency", pos: "n", meaning: "sự gần kề" }, { word: "adjacently", pos: "adv", meaning: "ở vị trí gần kề" }],
     example:
       "Some suites on the upper floors have connecting doors to adjacent rooms.",
     exampleVi:
@@ -384,7 +384,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌkɒnsənˈtreɪʃn/",
     pos: "n",
     meaning: "sự tập trung (tinh thần; dưỡng chất;...)",
-    related: ["concentrate"],
+    related: [{ word: "concentrate", pos: "v/n", meaning: "tập trung; cô đặc" }],
     example:
       "This pamphlet lists fruits and vegetables with the highest concentrations of vitamins.",
     exampleVi:
@@ -402,7 +402,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkɜːtiəs/",
     pos: "adj",
     meaning: "lịch sự",
-    related: ["courtesy", "courteously"],
+    related: [{ word: "courtesy", pos: "n", meaning: "sự lịch sự" }, { word: "courteously", pos: "adv", meaning: "một cách lịch sự" }],
     example: "The service was excellent and the staff was courteous and warm.",
     exampleVi: "Dịch vụ xuất sắc và nhân viên thì lịch sự và thân thiện.",
     phrases: [
@@ -436,7 +436,7 @@ const DAY_VOCAB = [
     phonetic: "/daɪn/",
     pos: "v",
     meaning: "dùng bữa (ăn)",
-    related: ["dinner", "diner", "dining"],
+    related: [{ word: "dinner", pos: "n", meaning: "bữa tối" }, { word: "diner", pos: "n", meaning: "người ăn tối; quán ăn nhỏ" }, { word: "dining", pos: "n", meaning: "việc ăn uống" }],
     example:
       "Dining at the sophisticated Jade restaurant, one gets a sense of experiencing something special.",
     exampleVi:
@@ -449,7 +449,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfleɪvər/",
     pos: "n",
     meaning: "hương vị",
-    related: ["flavored"],
+    related: [{ word: "flavored", pos: "adj", meaning: "có hương vị" }],
     example:
       "They were given a sample of each flavor and asked to rate each one.",
     exampleVi:
@@ -500,7 +500,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈfreʃɪŋ/",
     pos: "adj",
     meaning: "tươi mới",
-    related: ["refresh", "refreshment", "refreshingly"],
+    related: [{ word: "refresh", pos: "v", meaning: "làm tươi mới; làm mát" }, { word: "refreshment", pos: "n", meaning: "đồ ăn nhẹ; sự tươi mới" }, { word: "refreshingly", pos: "adv", meaning: "một cách sảng khoái" }],
     example:
       "The hotel's quiet mountain setting provides a refreshing change for visitors who live in a city.",
     exampleVi:
@@ -526,7 +526,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈsɔːtɪd/",
     pos: "adj",
     meaning: "khác nhau (nhiều loại)",
-    related: ["assort", "assortment"],
+    related: [{ word: "assort", pos: "v", meaning: "phân loại" }, { word: "assortment", pos: "n", meaning: "bộ sưu tập đa dạng" }],
     example: "I ordered assorted sandwiches for a luncheon here next Monday.",
     exampleVi:
       "Tôi đã đặt các bánh sandwich nhiều loại cho bữa ăn trưa ở đây vào thứ Hai tới.",
@@ -538,7 +538,7 @@ const DAY_VOCAB = [
     phonetic: "/kəˈmeməreɪt/",
     pos: "v",
     meaning: "kỷ niệm",
-    related: ["commemoration", "commemorative", "commemoratively"],
+    related: [{ word: "commemoration", pos: "n", meaning: "lễ kỷ niệm" }, { word: "commemorative", pos: "adj", meaning: "kỷ niệm" }, { word: "commemoratively", pos: "adv", meaning: "theo cách kỷ niệm" }],
     example:
       "To commemorate the twentieth anniversary of our restaurant chain, we have published a cookbook.",
     exampleVi:

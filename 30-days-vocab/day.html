@@ -54,6 +54,13 @@
 
     // ---- POS labels ----
     const posLabel = { n: 'danh từ', v: 'động từ', adj: 'tính từ', adv: 'trạng từ', 'n/v': 'danh/động từ', 'adj/n': 'tính từ/danh từ', prep: 'giới từ', conj: 'liên từ', phr: 'cụm từ' };
+    const formatRelatedItem = (item) => {
+      const word    = typeof item === 'string' ? item : (item && item.word);
+      if (!word) return '';
+      const pos     = typeof item === 'object' && item.pos     ? `<span class="related-tag-pos">${item.pos}</span>` : '';
+      const meaning = typeof item === 'object' && item.meaning ? `<span class="related-tag-meaning">${item.meaning}</span>` : '';
+      return `<span class="related-tag"><span class="related-tag-word">${word}</span>${pos}${meaning}</span>`;
+    };
 
     // ---- RENDER ----
     const list = document.getElementById('vocabList');
@@ -64,8 +71,8 @@
 
       const related = w.related && w.related.length
         ? `<div class="word-related">
-             <span class="related-label">Từ liên quan:</span>
-             <span class="related-words">${w.related.join(', ')}</span>
+             <span class="related-label">Từ liên quan</span>
+             <div class="related-tags">${w.related.map(formatRelatedItem).filter(Boolean).join('')}</div>
            </div>`
         : '';
 

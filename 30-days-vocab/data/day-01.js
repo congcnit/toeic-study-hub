@@ -5,7 +5,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈraɪvl/",
     pos: "n",
     meaning: "đến, sự đến nơi",
-    related: ["arrive"],
+    related: [{ word: "arrive", pos: "v", meaning: "đến, tới nơi" }],
     example:
       "Upon your arrival in Honolulu, your rental car will be waiting for you.",
     exampleVi: "Khi bạn đến Honolulu, xe thuê sẽ đợi bạn (ở đó).",
@@ -51,7 +51,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈpɑːt/",
     pos: "v",
     meaning: "khởi hành, rời đi",
-    related: ["departure"],
+    related: [{ word: "departure", pos: "n", meaning: "sự khởi hành, sự rời đi" }],
     example:
       "The airport shuttle departs every hour from the hotel's front entrance.",
     exampleVi:
@@ -71,7 +71,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪkˈspændɪd/",
     pos: "adj",
     meaning: "(được) mở rộng",
-    related: ["expand", "expansion"],
+    related: [{ word: "expand", pos: "v", meaning: "mở rộng" }, { word: "expansion", pos: "n", meaning: "sự mở rộng" }],
     example:
       "Misami Airlines will soon offer expanded service from Nagoya to 12 additional cities.",
     exampleVi:
@@ -115,7 +115,7 @@ const DAY_VOCAB = [
     phonetic: "/hɪˈstɒrɪk/",
     pos: "adj",
     meaning: "(mang tính) lịch sử",
-    related: ["history", "historian"],
+    related: [{ word: "history", pos: "n", meaning: "lịch sử" }, { word: "historian", pos: "n", meaning: "nhà sử học" }],
     example:
       "We're very happy to welcome you to the historic city of Brantford.",
     exampleVi:
@@ -163,7 +163,7 @@ const DAY_VOCAB = [
     phonetic: "/mɪˈkænɪkl/",
     pos: "adj",
     meaning: "(thuộc về) máy móc",
-    related: ["mechanic", "mechanically", "mechanize"],
+    related: [{ word: "mechanic", pos: "n", meaning: "thợ cơ khí, kỹ thuật viên" }, { word: "mechanically", pos: "adv", meaning: "theo cách cơ học" }, { word: "mechanize", pos: "v", meaning: "cơ giới hóa" }],
     example:
       "The afternoon flight from Tokyo has been canceled due to a mechanical problem.",
     exampleVi: "Chuyến bay chiều từ Tokyo đã bị hủy do vấn đề máy móc.",
@@ -199,7 +199,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈspɒnsəbl/",
     pos: "adj",
     meaning: "có trách nhiệm",
-    related: ["responsibility"],
+    related: [{ word: "responsibility", pos: "n", meaning: "trách nhiệm" }],
     example:
       "Passengers should be aware that the airline is not responsible for lost items.",
     exampleVi:
@@ -212,7 +212,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈseprət/",
     pos: "adj/v",
     meaning: "rời ra, riêng ra (adj); ngăn cách (v)",
-    related: ["separately", "separation"],
+    related: [{ word: "separately", pos: "adv", meaning: "riêng; tách rời" }, { word: "separation", pos: "n", meaning: "sự tách biệt, sự phân ly" }],
     example:
       "If you get separated from the tour, just meet us at the cafeteria at noon.",
     exampleVi:
@@ -269,7 +269,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈverɪfaɪ/",
     pos: "v",
     meaning: "xác nhận",
-    related: ["verification", "verifiable"],
+    related: [{ word: "verification", pos: "n", meaning: "sự xác minh" }, { word: "verifiable", pos: "adj", meaning: "có thể kiểm chứng" }],
     example: "It is always advisable to verify departure times.",
     exampleVi: "Bạn nên xác nhận thời gian khởi hành.",
     phrases: [],
@@ -355,7 +355,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈstɪŋktɪv/",
     pos: "adj",
     meaning: "tiêu biểu; nổi bật",
-    related: ["distinctively", "distinction", "distinctiveness"],
+    related: [{ word: "distinctively", pos: "adv", meaning: "một cách đặc biệt" }, { word: "distinction", pos: "n", meaning: "sự phân biệt, điểm khác biệt" }, { word: "distinctiveness", pos: "n", meaning: "tính đặc trưng" }],
     example:
       "You'll see the city's distinctive architecture, dating back to the late 18th century.",
     exampleVi:
@@ -373,7 +373,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈtaɪər/",
     pos: "adj",
     meaning: "toàn thể; toàn bộ",
-    related: ["entirety"],
+    related: [{ word: "entirety", pos: "n", meaning: "toàn bộ" }],
     example: "The entire trip will take most of the afternoon.",
     exampleVi: "Toàn bộ chuyến đi sẽ mất (thời gian) hầu hết buổi chiều.",
     phrases: [
@@ -393,7 +393,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfriːkwənt/",
     pos: "adj",
     meaning: "thường xuyên",
-    related: ["frequency", "frequently", "frequenter"],
+    related: [{ word: "frequency", pos: "n", meaning: "tần số, tần suất" }, { word: "frequently", pos: "adv", meaning: "thường xuyên" }, { word: "frequenter", pos: "n", meaning: "người thường xuyên lui tới" }],
     example:
       "We'll soon be adding more frequent service to five popular destinations.",
     exampleVi:
@@ -481,7 +481,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈsiːd/",
     pos: "v",
     meaning: "tiến hành; tiếp tục",
-    related: ["proceeding", "procedure", "process", "procession"],
+    related: [{ word: "proceeding", pos: "n", meaning: "diễn biến; thủ tục pháp lý" }, { word: "procedure", pos: "n", meaning: "thủ tục" }, { word: "process", pos: "n/v", meaning: "(n) quy trình; (v) xử lý" }, { word: "procession", pos: "n", meaning: "đám rước, đoàn diễu hành" }],
     example:
       "Wait for the boarding announcement before proceeding to the track.",
     exampleVi: "Hãy chờ thông báo lên tàu trước khi đi đến đường ray tàu hỏa.",
@@ -499,7 +499,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌredʒɪˈstreɪʃn/",
     pos: "n",
     meaning: "sự đăng ký",
-    related: ["register", "registry", "registered"],
+    related: [{ word: "register", pos: "v", meaning: "đăng ký" }, { word: "registry", pos: "n", meaning: "sổ đăng ký, văn phòng đăng ký" }, { word: "registered", pos: "adj", meaning: "đã đăng ký" }],
     example:
       "For advance registration, please visit our website at www.silvercruises.com.",
     exampleVi:
@@ -547,7 +547,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈtɪpɪkl/",
     pos: "adj",
     meaning: "tiêu biểu",
-    related: ["type", "typically", "typicality"],
+    related: [{ word: "type", pos: "n/v", meaning: "loại, kiểu; đánh máy" }, { word: "typically", pos: "adv", meaning: "thông thường" }, { word: "typicality", pos: "n", meaning: "tính điển hình" }],
     example:
       "Medication packages are far too expensive for our typical customers.",
     exampleVi:
@@ -610,7 +610,7 @@ const DAY_VOCAB = [
     pos: "n",
     meaning:
       "tình trạng mệt mỏi (do làm việc gắng sức / tập thể dục / đi tàu xe)",
-    related: ["fatigued", "fatiguing"],
+    related: [{ word: "fatigued", pos: "adj", meaning: "mệt mỏi" }, { word: "fatiguing", pos: "adj", meaning: "gây mệt mỏi" }],
     example:
       "Fatigue that lasts for days is one of the effects of jet lag well-known to airline passengers.",
     exampleVi:

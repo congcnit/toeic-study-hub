@@ -6,7 +6,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈfɔːd/",
     pos: "v",
     meaning: "đủ khả năng",
-    related: ["affordable"],
+    related: [{ word: "affordable", pos: "adj", meaning: "giá cả phải chăng" }],
     example: "No firm can afford to rely forever only on the strength of its name to sell products.",
     exampleVi: "Không công ty nào có thể chỉ dựa mãi vào sức mạnh thương hiệu để bán sản phẩm.",
     phrases: [
@@ -100,7 +100,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪmˈpruːv/",
     pos: "v",
     meaning: "cải tiến",
-    related: ["improvement"],
+    related: [{ word: "improvement", pos: "n", meaning: "sự cải thiện" }],
     example: "We will use the information collected in this survey to help improve our service.",
     exampleVi: "Chúng tôi sẽ sử dụng thông tin thu thập được trong cuộc khảo sát này để giúp cải tiến dịch vụ của chúng tôi.",
     phrases: [
@@ -206,7 +206,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈriːdʒən/",
     pos: "n",
     meaning: "khu vực",
-    related: ["regional"],
+    related: [{ word: "regional", pos: "adj", meaning: "thuộc khu vực" }],
     example: "We have tripled the area we serve and are now able to provide service to the entire region.",
     exampleVi: "Chúng tôi đã tăng gấp ba diện tích chúng tôi phục vụ và bây giờ có thể cung cấp dịch vụ cho toàn bộ khu vực.",
     phrases: [
@@ -220,7 +220,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌsætɪsˈfækʃn/",
     pos: "n",
     meaning: "sự hài lòng",
-    related: ["satisfied", "satisfactory", "dissatisfied"],
+    related: [{ word: "satisfied", pos: "adj", meaning: "hài lòng" }, { word: "satisfactory", pos: "adj", meaning: "đạt yêu cầu" }, { word: "dissatisfied", pos: "adj", meaning: "không hài lòng" }],
     example: "Atlantis Software Company guarantees its clients complete satisfaction with all its products.",
     exampleVi: "Công ty Phần mềm Atlantis đảm bảo khách hàng hoàn toàn hài lòng với tất cả các sản phẩm của công ty.",
     phrases: [

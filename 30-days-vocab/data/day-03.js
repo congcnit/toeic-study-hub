@@ -5,7 +5,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkeəfəli/",
     pos: "adv",
     meaning: "một cách cẩn thận",
-    related: ["careful"],
+    related: [{ word: "careful", pos: "adj", meaning: "cẩn thận" }],
     example: "It snowed a little last night so please drive carefully.",
     exampleVi: "Tối qua tuyết đã rơi một ít vì vậy hãy lái xe cẩn thận.",
     phrases: [],
@@ -16,7 +16,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkɔːʃəs/",
     pos: "adj",
     meaning: "dè dặt, thận trọng",
-    related: ["cautiously", "caution"],
+    related: [{ word: "cautiously", pos: "adv", meaning: "một cách thận trọng" }, { word: "caution", pos: "n/v", meaning: "(n) sự cẩn thận; (v) cảnh báo" }],
     example:
       "National Roadway Service advises drivers to be cautious during wet road conditions.",
     exampleVi:
@@ -38,7 +38,7 @@ const DAY_VOCAB = [
     phonetic: "/meɪnˈteɪn/",
     pos: "v",
     meaning: "duy trì; bảo trì",
-    related: ["maintenance"],
+    related: [{ word: "maintenance", pos: "n", meaning: "sự bảo trì" }],
     example:
       "We have trained personnel available to help you maintain your car.",
     exampleVi:
@@ -60,7 +60,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈpɜːfɪktli/",
     pos: "adv",
     meaning: "hoàn toàn; hoàn hảo",
-    related: ["perfect", "perfection"],
+    related: [{ word: "perfect", pos: "adj", meaning: "hoàn hảo" }, { word: "perfection", pos: "n", meaning: "sự hoàn hảo" }],
     example:
       "Our new midsized van is perfectly suited for families with two or three children.",
     exampleVi:
@@ -140,7 +140,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈwaɪdnɪŋ/",
     pos: "n",
     meaning: "việc mở rộng (đường)",
-    related: ["widen"],
+    related: [{ word: "widen", pos: "v", meaning: "mở rộng" }],
     example:
       "Many buildings have been torn down to make room for the widening of the highway.",
     exampleVi:
@@ -153,7 +153,7 @@ const DAY_VOCAB = [
     phonetic: "/əkˌseləˈreɪʃn/",
     pos: "n",
     meaning: "sự tăng tốc",
-    related: ["accelerate"],
+    related: [{ word: "accelerate", pos: "v", meaning: "tăng tốc, đẩy nhanh" }],
     example:
       "This magazine published a list of the world's fastest cars based on acceleration.",
     exampleVi:
@@ -171,7 +171,7 @@ const DAY_VOCAB = [
     phonetic: "/əkˈsesəbl/",
     pos: "adj",
     meaning: "có thể tiếp cận (sử dụng; tới được,...)",
-    related: ["access"],
+    related: [{ word: "access", pos: "n/v", meaning: "sự tiếp cận; đường vào" }],
     example:
       "Highway 140 is not accessible by Exit 2A due to road construction.",
     exampleVi:
@@ -190,7 +190,7 @@ const DAY_VOCAB = [
     phonetic: "/ɔːlˈtɜːnət/",
     pos: "adj",
     meaning: "thay thế",
-    related: ["alternation", "alternative", "alternately"],
+    related: [{ word: "alternation", pos: "n", meaning: "sự luân phiên" }, { word: "alternative", pos: "n/adj", meaning: "(n) sự lựa chọn; (adj) thay thế" }, { word: "alternately", pos: "adv", meaning: "luân phiên" }],
     example:
       "Commuters who usually travel that way must take alternate routes to work.",
     exampleVi:
@@ -220,7 +220,7 @@ const DAY_VOCAB = [
     phonetic: "/kəˈmjuːtər/",
     pos: "n",
     meaning: "người đi làm xa",
-    related: ["commute", "commutable"],
+    related: [{ word: "commute", pos: "v/n", meaning: "đi làm hàng ngày; chuyển đổi" }, { word: "commutable", pos: "adj", meaning: "có thể chuyển đổi" }],
     example:
       "Commuters can help reduce pollution by occasionally leaving their cars at home.",
     exampleVi:
@@ -237,7 +237,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈfensɪv/",
     pos: "adj",
     meaning: "có tính cẩn trọng, đề phòng",
-    related: ["defend", "defense", "defensively"],
+    related: [{ word: "defend", pos: "v", meaning: "bảo vệ" }, { word: "defense", pos: "n", meaning: "sự bảo vệ, biện hộ" }, { word: "defensively", pos: "adv", meaning: "theo cách phòng thủ" }],
     example:
       "All drivers must complete an eight-hour defensive driving course.",
     exampleVi:
@@ -250,7 +250,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈstrækʃn/",
     pos: "n",
     meaning: "sự phân tâm",
-    related: ["distract", "distracted", "distracting"],
+    related: [{ word: "distract", pos: "v", meaning: "làm phân tâm" }, { word: "distracted", pos: "adj", meaning: "mất tập trung" }, { word: "distracting", pos: "adj", meaning: "gây phân tâm" }],
     example:
       "Don't count on distractions such as the radio to keep you awake while driving.",
     exampleVi:
@@ -263,7 +263,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪˈmɪʃn/",
     pos: "n",
     meaning: "sự thải ra (khí)",
-    related: ["emit", "emissive"],
+    related: [{ word: "emit", pos: "v", meaning: "phát ra" }, { word: "emissive", pos: "adj", meaning: "có khả năng phát xạ" }],
     example: "Your vehicle has been inspected for exhausting emissions.",
     exampleVi: "Xe của bạn đã được kiểm tra về xả thải.",
     phrases: [
@@ -292,7 +292,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪˈmiːdiətli/",
     pos: "adv",
     meaning: "ngay",
-    related: ["immediate", "immediacy"],
+    related: [{ word: "immediate", pos: "adj", meaning: "ngay lập tức, trực tiếp" }, { word: "immediacy", pos: "n", meaning: "tính khẩn cấp" }],
     example:
       "If you are unable to move the car yourself, please notify a member of the hospital staff immediately.",
     exampleVi:
@@ -332,7 +332,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈklaɪn/",
     pos: "v/n",
     meaning: "cúi xuống (v); dốc (n)",
-    related: ["inclination"],
+    related: [{ word: "inclination", pos: "n", meaning: "xu hướng, sở thích" }],
     example: "The underpowered scooter struggled up the steep incline.",
     exampleVi: "Chiếc xe tay ga không đủ lực đã gặp khó khăn leo lên dốc đứng.",
     phrases: [],
@@ -343,7 +343,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈmænjuəli/",
     pos: "adv",
     meaning: "thủ công",
-    related: ["manual"],
+    related: [{ word: "manual", pos: "n", meaning: "sách hướng dẫn" }],
     example:
       "This gear shifter lets drivers manually change gears without pressing a clutch pedal.",
     exampleVi:
@@ -361,7 +361,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈfɪʃl/",
     pos: "adj/n",
     meaning: "chính thức (adj); quan chức (n)",
-    related: ["officiate", "officially"],
+    related: [{ word: "officiate", pos: "v", meaning: "làm trọng tài; làm chủ lễ" }, { word: "officially", pos: "adv", meaning: "chính thức" }],
     example: "The official speed limit on this highway is 100km/h.",
     exampleVi: "Giới hạn tốc độ chính thức trên quốc lộ này là 100km/h.",
     phrases: [
@@ -379,7 +379,7 @@ const DAY_VOCAB = [
     phonetic: "/prɪˈsaɪsli/",
     pos: "adv",
     meaning: "đúng, chính xác",
-    related: ["precise"],
+    related: [{ word: "precise", pos: "adj", meaning: "chính xác" }],
     example:
       "Fuel efficiency was precisely the reason she bought a hybrid vehicle.",
     exampleVi:
@@ -463,7 +463,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌrepjuˈteɪʃn/",
     pos: "n",
     meaning: "danh tiếng",
-    related: ["reputational"],
+    related: [{ word: "reputational", pos: "adj", meaning: "liên quan đến danh tiếng" }],
     example: "Cars made in Germany have a great reputation for safety.",
     exampleVi: "Ô tô sản xuất tại Đức nổi tiếng về sự an toàn.",
     phrases: [
@@ -511,7 +511,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈseɪfti/",
     pos: "n",
     meaning: "sự an toàn",
-    related: ["safe", "safely"],
+    related: [{ word: "safe", pos: "adj", meaning: "an toàn" }, { word: "safely", pos: "adv", meaning: "một cách an toàn" }],
     example:
       "Jack's old car failed the inspection because of a safety defect in the brakes.",
     exampleVi:
@@ -529,7 +529,7 @@ const DAY_VOCAB = [
     phonetic: "/sɪˈkjʊəli/",
     pos: "adv",
     meaning: "chặt, chắc chắn; an toàn",
-    related: ["secure", "security"],
+    related: [{ word: "secure", pos: "v; adj", meaning: "giành được; đạt được; an toàn" }, { word: "security", pos: "n", meaning: "sự an ninh; an toàn" }],
     example:
       "Before beginning our journey, I asked if everyone's seat belts were securely fastened.",
     exampleVi:
@@ -548,7 +548,7 @@ const DAY_VOCAB = [
     phonetic: "/spəˈsɪfɪkli/",
     pos: "adv",
     meaning: "đặc biệt",
-    related: ["specific"],
+    related: [{ word: "specific", pos: "adj", meaning: "cụ thể" }],
     example:
       "Jurassite Series bicycles are designed specifically for long-distance travel.",
     exampleVi:
@@ -567,7 +567,7 @@ const DAY_VOCAB = [
     phonetic: "/kəmˈpaɪl/",
     pos: "v",
     meaning: "biên soạn",
-    related: ["compilation"],
+    related: [{ word: "compilation", pos: "n", meaning: "bản tổng hợp, sự biên soạn" }],
     example:
       "This street guide to Tompkinsville has been compiled from detailed local maps.",
     exampleVi:
@@ -583,7 +583,7 @@ const DAY_VOCAB = [
     phonetic: "/kəmˈplaɪəns/",
     pos: "n",
     meaning: "sự tuân thủ",
-    related: ["comply"],
+    related: [{ word: "comply", pos: "v", meaning: "tuân thủ" }],
     example:
       "All drivers must be in compliance with all current motor vehicle laws.",
     exampleVi:
@@ -600,7 +600,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈsɪdərəbli/",
     pos: "adv",
     meaning: "đáng kể (tăng/giảm)",
-    related: ["considerable"],
+    related: [{ word: "considerable", pos: "adj", meaning: "đáng kể" }],
     example:
       "The subway is considerably faster than taking a private vehicle during rush hour.",
     exampleVi:
@@ -619,7 +619,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈdraʊzinəs/",
     pos: "n",
     meaning: "sự buồn ngủ",
-    related: ["drowsy"],
+    related: [{ word: "drowsy", pos: "adj", meaning: "buồn ngủ" }],
     example:
       "You might find that you experience some drowsiness, so take care of your driving.",
     exampleVi:
@@ -654,7 +654,7 @@ const DAY_VOCAB = [
     phonetic: "/səˈspend/",
     pos: "v",
     meaning: "đình chỉ",
-    related: ["suspension"],
+    related: [{ word: "suspension", pos: "n", meaning: "sự đình chỉ; hệ thống treo" }],
     example:
       "In the event of severe weather, affected bus routes may be temporarily suspended.",
     exampleVi:

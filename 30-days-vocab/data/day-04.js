@@ -34,7 +34,7 @@ const DAY_VOCAB = [
     phonetic: "/kəmˈpærɪsn/",
     pos: "n",
     meaning: "sự so sánh",
-    related: ["compare"],
+    related: [{ word: "compare", pos: "v", meaning: "so sánh" }],
     example:
       "Evelyn Chu's website provides consumers with price comparisons of electronic devices.",
     exampleVi:
@@ -47,7 +47,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈlaɪtɪd/",
     pos: "adj",
     meaning: "vui mừng; hài lòng",
-    related: ["delight", "delightful", "delightedly"],
+    related: [{ word: "delight", pos: "n/v", meaning: "niềm vui; làm vui thích" }, { word: "delightful", pos: "adj", meaning: "thú vị, dễ chịu" }, { word: "delightedly", pos: "adv", meaning: "với niềm vui" }],
     example:
       "You can always send the product back for a full refund if you're not delighted with them.",
     exampleVi:
@@ -86,7 +86,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈpækɪdʒɪŋ/",
     pos: "n",
     meaning: "bao bì",
-    related: ["package"],
+    related: [{ word: "package", pos: "n", meaning: "bao bì; gói hàng" }],
     example:
       "For a full refund, please return the product in its original packaging.",
     exampleVi:
@@ -99,7 +99,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈsiːt/",
     pos: "n",
     meaning: "hóa đơn; việc nhận",
-    related: ["receive"],
+    related: [{ word: "receive", pos: "v", meaning: "nhận" }],
     example:
       "In addition, please note that our return policy requires a receipt for a refund.",
     exampleVi:
@@ -122,7 +122,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈseɪvɪŋ/",
     pos: "n",
     meaning: "khoản tiết kiệm",
-    related: ["save", "savable"],
+    related: [{ word: "save", pos: "v", meaning: "tiết kiệm; cứu" }, { word: "savable", pos: "adj", meaning: "có thể lưu được" }],
     example:
       "We want to tell you about the substantial savings we are offering during our summer sale.",
     exampleVi:
@@ -135,7 +135,7 @@ const DAY_VOCAB = [
     phonetic: "/sɪˈlekʃn/",
     pos: "n",
     meaning: "sự lựa chọn",
-    related: ["select", "selected", "selective"],
+    related: [{ word: "select", pos: "v", meaning: "lựa chọn" }, { word: "selected", pos: "adj", meaning: "được chọn" }, { word: "selective", pos: "adj", meaning: "chọn lọc" }],
     example:
       "At the Walton Harvest Market, we carry the biggest selection of organic foods in the area.",
     exampleVi:
@@ -153,7 +153,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈspeʃəlaɪz/",
     pos: "v",
     meaning: "chuyên môn về",
-    related: ["special", "specialized", "specialization"],
+    related: [{ word: "special", pos: "adj", meaning: "đặc biệt" }, { word: "specialized", pos: "adj", meaning: "chuyên biệt" }, { word: "specialization", pos: "n", meaning: "chuyên môn hóa" }],
     example:
       "The gift shop in the hotel lobby specializes in hand-crafted gift items.",
     exampleVi:
@@ -166,7 +166,7 @@ const DAY_VOCAB = [
     phonetic: "/əkˈseptəbl/",
     pos: "adj",
     meaning: "chấp nhận được",
-    related: ["accept", "acceptance", "acceptably"],
+    related: [{ word: "accept", pos: "v", meaning: "chấp nhận" }, { word: "acceptance", pos: "n", meaning: "sự chấp thuận" }, { word: "acceptably", pos: "adv", meaning: "một cách chấp nhận được" }],
     example:
       "If this special rate is acceptable, please call me at 699-555-1857.",
     exampleVi:
@@ -179,7 +179,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈfɔːdəbl/",
     pos: "adj",
     meaning: "giá cả phải chăng",
-    related: ["afford"],
+    related: [{ word: "afford", pos: "v", meaning: "đủ khả năng" }],
     example:
       "This item is very affordable and available in a wide variety of colors.",
     exampleVi: "Sản phẩm này thì giá rất phải chăng và có sẵn nhiều màu sắc.",
@@ -196,7 +196,7 @@ const DAY_VOCAB = [
     phonetic: "/bi əˈkaʊntɪd fɔː/",
     pos: "v",
     meaning: "được kiểm đếm (hàng tồn kho)",
-    related: ["account"],
+    related: [{ word: "account", pos: "n", meaning: "tài khoản; khách hàng" }],
     example:
       "Almost all the store's inventory has been accounted for but a few items appear to be still missing.",
     exampleVi:
@@ -222,7 +222,7 @@ const DAY_VOCAB = [
     phonetic: "/kəmˈpetɪtɪv/",
     pos: "adj",
     meaning: "cạnh tranh (giá cả, mức lương, thị trường)",
-    related: ["competitively", "compete", "competition"],
+    related: [{ word: "competitively", pos: "adv", meaning: "theo cách cạnh tranh" }, { word: "compete", pos: "v", meaning: "cạnh tranh" }, { word: "competition", pos: "n", meaning: "sự cạnh tranh" }],
     example: "Our store offers competitive prices on all electronics.",
     exampleVi:
       "Cửa hàng chúng tôi cung cấp giá cả cạnh tranh cho mọi thiết bị điện tử.",
@@ -234,7 +234,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈviːniəns/",
     pos: "n",
     meaning: "sự tiện lợi",
-    related: ["convenient", "inconvenience"],
+    related: [{ word: "convenient", pos: "adj", meaning: "tiện lợi" }, { word: "inconvenience", pos: "n/v", meaning: "sự bất tiện; gây bất tiện" }],
     example: "The convenience of online shopping has made it very popular.",
     exampleVi: "Sự tiện lợi của mua sắm trực tuyến đã khiến nó rất phổ biến.",
     phrases: [],
@@ -259,7 +259,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈviːniənt/",
     pos: "adj",
     meaning: "tiện lợi",
-    related: ["conveniently"],
+    related: [{ word: "conveniently", pos: "adv", meaning: "một cách thuận tiện" }],
     example:
       "Sharma invites you to visit any of their convenience store locations for all your athletic clothing needs.",
     exampleVi:
@@ -290,7 +290,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈskrɪpʃn/",
     pos: "n",
     meaning: "sự miêu tả",
-    related: ["describe", "descriptive"],
+    related: [{ word: "describe", pos: "v", meaning: "miêu tả" }, { word: "descriptive", pos: "adj", meaning: "mang tính mô tả" }],
     example: "The product did not fit the advertised description.",
     exampleVi: "Sản phẩm không đúng với mô tả được quảng cáo.",
     phrases: [{ en: "job description", vi: "bản mô tả công việc" }],
@@ -363,7 +363,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkwɒlɪfaɪ/",
     pos: "v",
     meaning: "đủ điều kiện",
-    related: ["qualification", "qualified"],
+    related: [{ word: "qualification", pos: "n", meaning: "trình độ, bằng cấp" }, { word: "qualified", pos: "adj", meaning: "có đủ năng lực; đủ điều kiện" }],
     example:
       "To qualify for the local shopper discount, customers must show proof of residency.",
     exampleVi:
@@ -398,7 +398,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈriːznəbl/",
     pos: "adj",
     meaning: "hợp lý (giá cả)",
-    related: ["reason", "reasonably"],
+    related: [{ word: "reason", pos: "n/v", meaning: "lý do; lý lẽ" }, { word: "reasonably", pos: "adv", meaning: "phải chăng; một cách hợp lý" }],
     example:
       "In order to keep prices reasonable, Kim's Bakery will begin making its bread in bulk.",
     exampleVi:
@@ -415,7 +415,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈdjuːst/",
     pos: "adj",
     meaning: "(giá) được giảm",
-    related: ["reduce", "reduction"],
+    related: [{ word: "reduce", pos: "v", meaning: "giảm" }, { word: "reduction", pos: "n", meaning: "sự giảm bớt" }],
     example:
       "All products on display in the store window are available at reduced prices.",
     exampleVi:
@@ -428,7 +428,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈspɒnsɪv/",
     pos: "adj",
     meaning: "phản hồi nhanh",
-    related: ["response", "respond", "responsively"],
+    related: [{ word: "response", pos: "n", meaning: "phản hồi" }, { word: "respond", pos: "v", meaning: "trả lời; phản hồi" }, { word: "responsively", pos: "adv", meaning: "một cách đáp ứng" }],
     example:
       "The Jeness Department Store is seeking ways to be more responsive to its customers.",
     exampleVi:
@@ -454,7 +454,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈspəʊzəbl/",
     pos: "adj",
     meaning: "dùng một lần (bát, đũa,...)",
-    related: ["dispose"],
+    related: [{ word: "dispose", pos: "v", meaning: "vứt bỏ" }],
     example:
       "We carry disposable food containers and other durable packaging materials.",
     exampleVi:
@@ -483,7 +483,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈtaɪtl/",
     pos: "v",
     meaning: "cho phép (được quyền nhận/làm gì)",
-    related: ["entitlement"],
+    related: [{ word: "entitlement", pos: "n", meaning: "quyền lợi" }],
     example:
       "You can expect a Gardner Friends Card, which entitles you to many benefits.",
     exampleVi:
@@ -512,7 +512,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈlɪŋɡər/",
     pos: "v",
     meaning: "nấn ná, nán lại (vì không muốn rời đi)",
-    related: ["lingering", "lingerer", "lingeringly"],
+    related: [{ word: "lingering", pos: "adj", meaning: "kéo dài, lưu luyến" }, { word: "lingerer", pos: "n", meaning: "người lưu luyến" }, { word: "lingeringly", pos: "adv", meaning: "một cách lưu luyến" }],
     example:
       "Now people linger at our stores and buy more housewares and furniture.",
     exampleVi:
@@ -525,7 +525,7 @@ const DAY_VOCAB = [
     phonetic: "/lʊər/",
     pos: "v",
     meaning: "thu hút (khách hàng)",
-    related: ["luring"],
+    related: [{ word: "luring", pos: "adj", meaning: "quyến rũ" }],
     example:
       "We decided to try giving out some beverages to lure people into the store.",
     exampleVi:
@@ -538,7 +538,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌprefəˈrenʃl/",
     pos: "adj",
     meaning: "ưu tiên; ưu đãi",
-    related: ["preferred", "preference"],
+    related: [{ word: "preferred", pos: "adj", meaning: "được ưa thích" }, { word: "preference", pos: "n", meaning: "sở thích" }],
     example:
       "Bylar Furnishings is the preferential office-furniture vendor for the area's largest corporations.",
     exampleVi:

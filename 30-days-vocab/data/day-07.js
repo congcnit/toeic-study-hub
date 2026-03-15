@@ -16,7 +16,7 @@ const DAY_VOCAB = [
     phonetic: "/kəˈlekʃn/",
     pos: "n",
     meaning: "bộ sưu tập",
-    related: ["collect", "collective"],
+    related: [{ word: "collect", pos: "v", meaning: "thu thập" }, { word: "collective", pos: "adj", meaning: "tập thể" }],
     example: "Donald Granger's latest collection of water paintings is made up of 32 pieces.",
     exampleVi: "Bộ sưu tập tranh màu nước mới nhất của Donald Granger gồm có 32 tác phẩm.",
     phrases: [
@@ -30,7 +30,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪɡˈzɪbɪt/",
     pos: "n/v",
     meaning: "vật trưng bày; triển lãm; trưng bày",
-    related: ["exhibition"],
+    related: [{ word: "exhibition", pos: "n", meaning: "triển lãm" }],
     example: "Portman Gallery will feature a permanent exhibit of Frederick Protman's early works.",
     exampleVi: "Phòng tranh Portman sẽ có một triển lãm thường trực về các tác phẩm ban đầu của Frederick Protman.",
     phrases: [
@@ -44,7 +44,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfæsɪneɪtɪŋ/",
     pos: "adj",
     meaning: "hấp dẫn, cuốn hút, thú vị",
-    related: ["fascinated"],
+    related: [{ word: "fascinated", pos: "adj", meaning: "bị cuốn hút" }],
     example: "There's a special photography exhibit of famous bridges and each photograph there is so fascinating.",
     exampleVi: "Có một triển lãm nhiếp ảnh đặc biệt về các cây cầu nổi tiếng và mỗi bức ảnh ở đó đều rất hấp dẫn.",
     phrases: [],
@@ -55,7 +55,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪmˈpresɪv/",
     pos: "adj",
     meaning: "ấn tượng",
-    related: ["impressed"],
+    related: [{ word: "impressed", pos: "adj", meaning: "bị ấn tượng (người)" }],
     example: "This soap sculpture of a castle is the most impressive one here.",
     exampleVi: "Tác phẩm điêu khắc lâu đài bằng xà phòng này là tác phẩm ấn tượng nhất ở đây.",
     phrases: [
@@ -82,7 +82,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌpɒpjuˈlærəti/",
     pos: "n",
     meaning: "sự được yêu thích",
-    related: ["popular"],
+    related: [{ word: "popular", pos: "adj", meaning: "phổ biến; được ưa thích" }],
     example: "Ice sculpting is growing in popularity.",
     exampleVi: "Điêu khắc bằng băng đang ngày càng được ưa chuộng.",
     phrases: [
@@ -96,7 +96,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈzɜːv/",
     pos: "v",
     meaning: "đặt chỗ",
-    related: ["reservation", "reserved"],
+    related: [{ word: "reservation", pos: "n", meaning: "sự đặt phòng" }, { word: "reserved", pos: "adj", meaning: "được đặt trước; dè dặt" }],
     example: "Tickets for the exhibition may be reserved by calling the Office of Museum Programs.",
     exampleVi: "Vé cho triển lãm có thể được đặt trước bằng cách gọi đến Văn phòng Chương trình Bảo tàng.",
     phrases: [
@@ -111,7 +111,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈrɪtʃli/",
     pos: "adv",
     meaning: "đầy đủ, hoàn toàn",
-    related: ["rich"],
+    related: [{ word: "rich", pos: "adj", meaning: "giàu có; phong phú" }],
     example: "We know the Birmingham community would richly benefit from the exhibit.",
     exampleVi: "Chúng ta biết cộng đồng Birmingham sẽ được hưởng lợi hoàn toàn từ cuộc triển lãm.",
     phrases: [],
@@ -133,7 +133,7 @@ const DAY_VOCAB = [
     phonetic: "/wɜːθ/",
     pos: "adj/n",
     meaning: "đáng giá; giá trị",
-    related: ["worthy"],
+    related: [{ word: "worthy", pos: "adj", meaning: "xứng đáng" }],
     example: "The international furniture exhibition was really crowded, but it was worth the trip.",
     exampleVi: "Triển lãm nội thất quốc tế rất đông đúc, nhưng đáng để đi.",
     phrases: [
@@ -185,7 +185,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈweənəs/",
     pos: "n",
     meaning: "nhận thức",
-    related: ["aware"],
+    related: [{ word: "aware", pos: "adj", meaning: "biết; lưu ý" }],
     example: "The marketing director is responsible for raising public awareness of the museum and its activities.",
     exampleVi: "Giám đốc marketing chịu trách nhiệm nâng cao nhận thức của công chúng về bảo tàng và các hoạt động của nó.",
     phrases: [
@@ -216,7 +216,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈtɪnjuəli/",
     pos: "adv",
     meaning: "liên tục",
-    related: ["continual"],
+    related: [{ word: "continual", pos: "adj", meaning: "liên tục" }],
     example: "Illustrators are continually looking for sources of creative inspiration.",
     exampleVi: "Những người vẽ tranh minh họa liên tục tìm kiếm nguồn cảm hứng sáng tạo.",
     phrases: [
@@ -229,7 +229,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈrekt/",
     pos: "adj/v",
     meaning: "(adj) trực tiếp; thẳng thắn; (v) chuyển (câu hỏi, thư...)",
-    related: ["direction", "directly"],
+    related: [{ word: "direction", pos: "n", meaning: "hướng, định hướng" }, { word: "directly", pos: "adv", meaning: "trực tiếp" }],
     example: "Questions about the exhibit should be directed to Mr. Stanley, the museum's curator.",
     exampleVi: "Các câu hỏi về triển lãm nên được chuyển đến ông Stanley, người quản lý bảo tàng.",
     phrases: [],
@@ -240,7 +240,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈstɪŋɡwɪʃ/",
     pos: "v",
     meaning: "phân biệt",
-    related: ["distinguished"],
+    related: [{ word: "distinguished", pos: "adj", meaning: "nổi tiếng, xuất sắc" }],
     example: "It is easy to distinguish Carla's work from that of other photographers.",
     exampleVi: "Thật dễ dàng để phân biệt tác phẩm của Carla với tác phẩm của các nhiếp ảnh gia khác.",
     phrases: [
@@ -253,7 +253,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈiːɡə/",
     pos: "adj",
     meaning: "háo hức",
-    related: ["eagerness"],
+    related: [{ word: "eagerness", pos: "n", meaning: "sự hào hứng, nhiệt tình" }],
     example: "Ruleof is eager to learn if his sketch of Stockwell Lake won first place in the contest.",
     exampleVi: "Ruleof háo hức muốn biết liệu bản vẽ của ông về Stockwell Lake có giành giải nhất trong cuộc thi hay không.",
     phrases: [
@@ -267,7 +267,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪˈlɪsɪt/",
     pos: "v",
     meaning: "lấy được, tạo ra (phản ứng)",
-    related: ["elicitable"],
+    related: [{ word: "elicitable", pos: "adj", meaning: "có thể gợi ra" }],
     example: "A sculpture in the lobby of the Pearl Hotel has elicited a lot of laughter from guests.",
     exampleVi: "Một tác phẩm điêu khắc ở tiền sảnh khách sạn Pearl đã tạo nhiều tiếng cười cho khách.",
     phrases: [
@@ -282,7 +282,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈtaɪərəti/",
     pos: "n",
     meaning: "toàn bộ",
-    related: ["entire"],
+    related: [{ word: "entire", pos: "adj", meaning: "toàn thể; toàn bộ" }],
     example: "Tamara Jacks devoted the entirety of her life to children's art education.",
     exampleVi: "Tamara Jacks cống hiến toàn bộ cuộc đời mình cho giáo dục nghệ thuật trẻ em.",
     phrases: [
@@ -297,7 +297,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈfiːtʃə/",
     pos: "v/n",
     meaning: "(v) bao gồm người/vật đặc biệt; (n) tính năng",
-    related: ["featured"],
+    related: [{ word: "featured", pos: "adj", meaning: "được nổi bật" }],
     example: "This exhibit features life-size statues made of glass.",
     exampleVi: "Triển lãm này có các bức tượng to như thật bằng thủy tinh.",
     phrases: [
@@ -323,7 +323,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈhəʊldɪŋ/",
     pos: "n",
     meaning: "việc nắm giữ (tài sản, cổ phần); tác phẩm/ hiện vật sở hữu (của bảo tàng)",
-    related: ["hold"],
+    related: [{ word: "hold", pos: "n/v", meaning: "giữ; nắm giữ" }],
     example: "The Stellen Museum's extensive holdings consist of a mix of ancient artifacts and paintings.",
     exampleVi: "Tác phẩm sở hữu đa dạng của Bảo tàng Stellen bao gồm sự kết hợp của các hiện vật và tranh cổ.",
     phrases: [],
@@ -345,7 +345,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈlɑːstɪŋ/",
     pos: "adj",
     meaning: "bền; lâu dài",
-    related: ["last"],
+    related: [{ word: "last", pos: "adj", meaning: "cuối cùng; kéo dài" }],
     example: "This statue is a lasting memorial of our country's greatest artist.",
     exampleVi: "Bức tượng này là đài tưởng niệm lâu bền về nghệ sĩ vĩ đại nhất của đất nước.",
     phrases: [
@@ -358,7 +358,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈlɪmɪt/",
     pos: "v",
     meaning: "giới hạn",
-    related: ["limitation", "limited"],
+    related: [{ word: "limitation", pos: "n", meaning: "giới hạn, hạn chế" }, { word: "limited", pos: "adj", meaning: "hạn chế; có hạn" }],
     example: "The total number of booths at the Jasper County Fair has been limited to 15.",
     exampleVi: "Tổng số gian hàng tại Hội chợ Hạt Jasper đã giới hạn ở mức 15.",
     phrases: [
@@ -385,7 +385,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈpæʃn/",
     pos: "n",
     meaning: "niềm đam mê",
-    related: ["passionate"],
+    related: [{ word: "passionate", pos: "adj", meaning: "đam mê, nhiệt huyết" }],
     example: "Delia's passion for ancient artifacts prompted her to get a job as a tour guide at a local museum.",
     exampleVi: "Niềm đam mê của Delia đối với cổ vật đã thôi thúc cô nhận việc làm hướng dẫn viên tại một bảo tàng địa phương.",
     phrases: [
@@ -398,7 +398,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈhɪbɪt/",
     pos: "v",
     meaning: "cấm",
-    related: ["prohibition", "prohibitive"],
+    related: [{ word: "prohibition", pos: "n", meaning: "lệnh cấm" }, { word: "prohibitive", pos: "adj", meaning: "cấm đoán; quá cao" }],
     example: "Taking photos of any kind is strictly prohibited in this gallery.",
     exampleVi: "Nghiêm cấm chụp ảnh dưới bất kỳ hình thức nào trong phòng tranh này.",
     phrases: [
@@ -412,7 +412,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈprɒmɪnəntli/",
     pos: "adv",
     meaning: "nổi bật; dễ thấy",
-    related: ["prominent"],
+    related: [{ word: "prominent", pos: "adj", meaning: "nổi bật" }],
     example: "Of all the people in this photograph, the girl in the red dress stands out most prominently.",
     exampleVi: "Trong tất cả mọi người trong bức ảnh này, cô gái mặc váy đỏ nổi bật nhất.",
     phrases: [
@@ -425,7 +425,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈtekt/",
     pos: "v",
     meaning: "bảo vệ",
-    related: ["protective", "protection"],
+    related: [{ word: "protective", pos: "adj", meaning: "có tính bảo vệ" }, { word: "protection", pos: "n", meaning: "sự bảo vệ" }],
     example: "Woodworkers have to wear gloves to protect their hands.",
     exampleVi: "Người làm đồ gỗ phải đeo găng tay để bảo vệ tay.",
     phrases: [
@@ -439,7 +439,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌriːˈfɜːbɪʃmənt/",
     pos: "n",
     meaning: "sự tu bổ",
-    related: ["refurbish"],
+    related: [{ word: "refurbish", pos: "v", meaning: "tân trang, cải tạo" }],
     example: "The old city museum in the Czech Republic will undergo a major refurbishment beginning April 1.",
     exampleVi: "Bảo tàng thành phố cũ ở Cộng hòa Séc sẽ được tu sửa quy mô lớn bắt đầu từ 1 tháng 4.",
     phrases: [],
@@ -450,7 +450,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈskʌlptʃə/",
     pos: "n",
     meaning: "tượng điêu khắc; tác phẩm điêu khắc",
-    related: ["sculptor"],
+    related: [{ word: "sculptor", pos: "n", meaning: "nhà điêu khắc" }],
     example: "The exhibition of German sculpture will be on display for the next twelve weeks.",
     exampleVi: "Triển lãm tác phẩm điêu khắc Đức sẽ được trưng bày trong 12 tuần tiếp theo.",
     phrases: [],
@@ -474,7 +474,7 @@ const DAY_VOCAB = [
     phonetic: "/triːt/",
     pos: "v/n",
     meaning: "(v) đối xử; điều trị; xử lý (hóa chất); (n) món chiêu đãi",
-    related: ["treatment", "treatable"],
+    related: [{ word: "treatment", pos: "n", meaning: "sự điều trị; cách đối xử" }, { word: "treatable", pos: "adj", meaning: "có thể điều trị" }],
     example: "To prevent rust, this antique car was treated with two coats of wax.",
     exampleVi: "Để ngăn gỉ sắt, chiếc xe cổ này được xử lý bằng hai lớp sáp.",
     phrases: [
@@ -487,7 +487,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌʌnfəˈmɪliə/",
     pos: "adj",
     meaning: "không quen; không có kinh nghiệm",
-    related: ["familiar"],
+    related: [{ word: "familiar", pos: "adj", meaning: "quen thuộc" }],
     example: "Since the area is unfamiliar to him, Nereus cannot find the Devon Pottery Museum.",
     exampleVi: "Bởi vì không quen khu vực, Nereus không thể tìm thấy Bảo tàng Đồ gốm Devon.",
     phrases: [
@@ -500,7 +500,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈwaɪdli/",
     pos: "adv",
     meaning: "rộng rãi",
-    related: ["wide"],
+    related: [{ word: "wide", pos: "adj", meaning: "rộng" }],
     example: "As a photographer, Jasper Cummings was widely known for his innovative use of lights.",
     exampleVi: "Là nhiếp ảnh gia, Jasper Cummings được biết đến rộng rãi vì cách dùng ánh sáng sáng tạo.",
     phrases: [
@@ -515,7 +515,7 @@ const DAY_VOCAB = [
     phonetic: "/səˈlɪdɪfaɪ/",
     pos: "v",
     meaning: "đông lại; củng cố (vị trí, sự hiện diện)",
-    related: ["solidification", "solid"],
+    related: [{ word: "solidification", pos: "n", meaning: "sự hóa đặc" }, { word: "solid", pos: "n/adj", meaning: "chắc chắn; vật rắn" }],
     example: "Lara Jenkins will soon solidify the dates for the Wild Music exhibit.",
     exampleVi: "Lara Jenkins sẽ sớm chốt (củng cố) ngày triển lãm Wild Music.",
     phrases: [

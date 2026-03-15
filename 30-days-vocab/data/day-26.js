@@ -6,7 +6,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈækjərət/",
     pos: "adj",
     meaning: "chính xác",
-    related: ["accuracy", "accurately"],
+    related: [{ word: "accuracy", pos: "n", meaning: "độ chính xác" }, { word: "accurately", pos: "adv", meaning: "một cách chính xác" }],
     example: "Meters do occasionally malfunction, making an accurate reading impossible.",
     exampleVi: "Đồng hồ đo đôi khi trục trặc, làm cho việc đọc chỉ số chính xác là không thể.",
     phrases: [
@@ -19,7 +19,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈkemɪkl/",
     pos: "n; adj",
     meaning: "hóa chất; thuộc về hóa học",
-    related: ["chemistry", "chemically"],
+    related: [{ word: "chemistry", pos: "n", meaning: "hóa học" }, { word: "chemically", pos: "adv", meaning: "về mặt hóa học" }],
     example: "Xenol, Inc. is trying to develop instant chemical analysis tests for use in industrial laboratories.",
     exampleVi: "Công ty Xenol đang cố gắng phát triển các xét nghiệm phân tích hóa chất tức thời để sử dụng trong các phòng thí nghiệm công nghiệp.",
     phrases: [
@@ -34,7 +34,7 @@ const DAY_VOCAB = [
     phonetic: "/drɒp/",
     pos: "n; v",
     meaning: "rơi; giảm",
-    related: ["dropping"],
+    related: [{ word: "dropping", pos: "n", meaning: "sự giảm; nhỏ giọt" }],
     example: "A drop in demand for factory goods is seen as a sign of trouble in the manufacturing sector.",
     exampleVi: "Sự sụt giảm nhu cầu về hàng hoá của nhà máy được xem là dấu hiệu của vấn đề trong ngành sản xuất.",
     phrases: [
@@ -59,7 +59,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌmænjuˈfæktʃə/",
     pos: "v",
     meaning: "chế tạo",
-    related: ["manufacturing", "manufacturer"],
+    related: [{ word: "manufacturing", pos: "n", meaning: "sản xuất" }, { word: "manufacturer", pos: "n", meaning: "nhà sản xuất" }],
     example: "Randolph Chemical is a global technology-based company that manufactures plastic products.",
     exampleVi: "Công ty hóa chất Randolph là một công ty dựa trên công nghệ toàn cầu sản xuất các sản phẩm nhựa.",
     phrases: [],
@@ -70,7 +70,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈmerɪt/",
     pos: "n",
     meaning: "ưu điểm",
-    related: ["merited"],
+    related: [{ word: "merited", pos: "adj", meaning: "xứng đáng" }],
     example: "In terms of maintaining low production costs, the merits of this particular model are excellent.",
     exampleVi: "Về mặt duy trì chi phí sản xuất thấp, những ưu điểm của mẫu cụ thể này là xuất sắc.",
     phrases: [
@@ -97,7 +97,7 @@ const DAY_VOCAB = [
     phonetic: "/prɪˈdɪkt/",
     pos: "v",
     meaning: "dự đoán",
-    related: ["prediction", "predictable", "predictably"],
+    related: [{ word: "prediction", pos: "n", meaning: "dự đoán" }, { word: "predictable", pos: "adj", meaning: "có thể dự đoán" }, { word: "predictably", pos: "adv", meaning: "theo đúng dự đoán" }],
     example: "Ms. Unger's model for predicting weather patterns will give accurate results.",
     exampleVi: "Mô hình của bà Unger để dự báo thời tiết sẽ cho kết quả chính xác.",
     phrases: [
@@ -110,7 +110,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈpleɪs/",
     pos: "v",
     meaning: "thay thế",
-    related: ["replacement", "replaceable"],
+    related: [{ word: "replacement", pos: "n", meaning: "sự thay thế; vật/ người thay thế" }, { word: "replaceable", pos: "adj", meaning: "có thể thay thế" }],
     example: "The Mini-Turbo has been replaced by a newer model.",
     exampleVi: "Mini-Turbo đã được thay thế bởi một mẫu mới hơn.",
     phrases: [
@@ -123,7 +123,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈpleɪsmənt/",
     pos: "n",
     meaning: "sự thay thế; vật/ người thay thế",
-    related: ["replace"],
+    related: [{ word: "replace", pos: "v", meaning: "thay thế" }],
     example: "They feel that they can only partially repair the machine and they would suggest a replacement.",
     exampleVi: "Họ cảm thấy rằng họ chỉ có thể sửa chữa một phần máy và họ sẽ đề nghị một sự thay thế.",
     phrases: [
@@ -140,7 +140,7 @@ const DAY_VOCAB = [
     phonetic: "/weɪst/",
     pos: "v; n",
     meaning: "lãng phí; sự lãng phí; chất thải",
-    related: ["wasteful", "wasting", "wasted"],
+    related: [{ word: "wasteful", pos: "adj", meaning: "lãng phí" }, { word: "wasting", pos: "adj", meaning: "đang lãng phí" }, { word: "wasted", pos: "adj", meaning: "bị lãng phí" }],
     example: "Researchers have developed an improved method of extracting fuel from industrial waste materials.",
     exampleVi: "Các nhà nghiên cứu đã phát triển một phương pháp cải tiến để chiết xuất nhiên liệu từ các chất thải công nghiệp.",
     phrases: [
@@ -155,7 +155,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈdʒʌstəbl/",
     pos: "adj",
     meaning: "điều chỉnh được",
-    related: ["adjust", "adjustably"],
+    related: [{ word: "adjust", pos: "v", meaning: "điều chỉnh" }, { word: "adjustably", pos: "adv", meaning: "có thể điều chỉnh" }],
     example: "The plastic safety glasses are stored in the equipment closet and are adjustable.",
     exampleVi: "Kính an toàn bằng nhựa được chứa trong tủ thiết bị và có thể điều chỉnh được.",
     phrases: [
@@ -169,7 +169,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈsembli/",
     pos: "n",
     meaning: "sự lắp ráp",
-    related: ["assemble"],
+    related: [{ word: "assemble", pos: "v", meaning: "lắp ráp; tập hợp" }],
     example: "Before leaving the assembly facility, each unit is carefully checked for imperfections.",
     exampleVi: "Trước khi rời khỏi bộ phận lắp ráp, mỗi máy được kiểm tra kỹ lưỡng xem có khuyết điểm hay không.",
     phrases: [
@@ -182,7 +182,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈbreθteɪkɪŋli/",
     pos: "adv",
     meaning: "tuyệt diệu; đáng kinh ngạc",
-    related: ["breathtaking"],
+    related: [{ word: "breathtaking", pos: "adj", meaning: "tuyệt đẹp; ngoạn mục" }],
     example: "From the outside, the design of this new product is breathtakingly simple.",
     exampleVi: "Từ bên ngoài, thiết kế sản phẩm mới này đơn giản đáng kinh ngạc.",
     phrases: [
@@ -195,7 +195,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈemfəsɪs/",
     pos: "n",
     meaning: "nhấn mạnh",
-    related: ["emphasize"],
+    related: [{ word: "emphasize", pos: "v", meaning: "nhấn mạnh" }],
     example: "Most manufacturers place an emphasis on inexpensive operations.",
     exampleVi: "Hầu hết các nhà sản xuất nhấn mạnh đến các hoạt động không tốn kém.",
     phrases: [
@@ -208,7 +208,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈhɑːns/",
     pos: "v",
     meaning: "nâng cao",
-    related: ["enhancement", "enhanced"],
+    related: [{ word: "enhancement", pos: "n", meaning: "sự cải thiện" }, { word: "enhanced", pos: "adj", meaning: "được tăng cường" }],
     example: "These changes will enhance business efficiency and improve productivity.",
     exampleVi: "Những thay đổi này sẽ nâng cao hiệu quả kinh doanh và cải thiện năng suất.",
     phrases: [
@@ -235,7 +235,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪkˈskluːdɪŋ/",
     pos: "prep",
     meaning: "không bao gồm",
-    related: ["exclude", "exclusion", "exclusive"],
+    related: [{ word: "exclude", pos: "v", meaning: "loại trừ" }, { word: "exclusion", pos: "n", meaning: "sự loại trừ" }, { word: "exclusive", pos: "adj", meaning: "độc quyền" }],
     example: "The production costs for Pro Tip markers are $2.15 per set, excluding the cost of packaging.",
     exampleVi: "Chi phí sản xuất cho bút lông Pro Tip là 2,15 đô mỗi bộ, không bao gồm chi phí đóng gói.",
     phrases: [
@@ -248,7 +248,7 @@ const DAY_VOCAB = [
     phonetic: "/flɔː/",
     pos: "n",
     meaning: "lỗ hổng; khiếm khuyết",
-    related: ["flawed", "flawless", "flawlessly"],
+    related: [{ word: "flawed", pos: "adj", meaning: "có khiếm khuyết" }, { word: "flawless", pos: "adj", meaning: "hoàn hảo" }, { word: "flawlessly", pos: "adv", meaning: "một cách hoàn hảo" }],
     example: "The quality-control process will be revised due to the large number of product flaws being reported.",
     exampleVi: "Quy trình kiểm soát chất lượng sẽ được điều chỉnh lại do số lượng lớn các lỗi sản phẩm đang bị báo cáo.",
     phrases: [
@@ -275,7 +275,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌɪnɪˈfɪʃnt/",
     pos: "adj",
     meaning: "kém hiệu quả",
-    related: ["inefficiency", "inefficiently"],
+    related: [{ word: "inefficiency", pos: "n", meaning: "sự kém hiệu quả" }, { word: "inefficiently", pos: "adv", meaning: "một cách kém hiệu quả" }],
     example: "We find it hard to compete with other businesses because our equipment is inefficient.",
     exampleVi: "Chúng tôi thấy khó cạnh tranh với các doanh nghiệp khác vì thiết bị của chúng tôi kém hiệu quả.",
     phrases: [],
@@ -297,7 +297,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈspekʃn/",
     pos: "n",
     meaning: "sự kiểm tra",
-    related: ["inspect", "inspector", "inspectorial"],
+    related: [{ word: "inspect", pos: "v", meaning: "kiểm tra" }, { word: "inspector", pos: "n", meaning: "thanh tra viên" }, { word: "inspectorial", pos: "adj", meaning: "liên quan đến kiểm tra" }],
     example: "Dixon Dairy Products Ltd. has spent nearly 1.5 million pounds to improve its inspection rooms.",
     exampleVi: "Công ty trách nhiệm hữu hạn sữa Dixon đã chi gần 1,5 triệu bảng để cải thiện các phòng kiểm định.",
     phrases: [
@@ -313,7 +313,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌɪntrəˈdjuːs/",
     pos: "v",
     meaning: "giới thiệu",
-    related: ["introduction", "introductory"],
+    related: [{ word: "introduction", pos: "n", meaning: "lời giới thiệu; sự ra mắt" }, { word: "introductory", pos: "adj", meaning: "giới thiệu; mở đầu" }],
     example: "Last year, Trigto Communications introduced seven successful new phone models.",
     exampleVi: "Năm ngoái, công ty truyền thông Trigto giới thiệu 7 mẫu điện thoại mới thành công.",
     phrases: [
@@ -327,7 +327,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪnˈvent/",
     pos: "v",
     meaning: "phát minh",
-    related: ["invention", "inventive", "inventable"],
+    related: [{ word: "invention", pos: "n", meaning: "phát minh" }, { word: "inventive", pos: "adj", meaning: "sáng tạo" }, { word: "inventable", pos: "adj", meaning: "có thể phát minh" }],
     example: "Our head engineer, Mr. Anderson, invented the noise-reduction system.",
     exampleVi: "Kỹ sư trưởng của chúng tôi, ông Anderson, đã phát minh ra hệ thống giảm tiếng ồn.",
     phrases: [],
@@ -349,7 +349,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈmeɪntənəns/",
     pos: "n",
     meaning: "sự bảo trì",
-    related: ["maintain"],
+    related: [{ word: "maintain", pos: "v", meaning: "duy trì; bảo trì" }],
     example: "We'll be shutting down production today to do some routine maintenance on the equipment.",
     exampleVi: "Chúng tôi sẽ ngừng sản xuất hôm nay để thực hiện một số công việc bảo trì định kì cho thiết bị.",
     phrases: [
@@ -367,7 +367,7 @@ const DAY_VOCAB = [
     phonetic: "/əbˈzɜːv/",
     pos: "v",
     meaning: "tuân theo; quan sát; tổ chức",
-    related: ["observation", "observance", "observant", "observably"],
+    related: [{ word: "observation", pos: "n", meaning: "sự quan sát" }, { word: "observance", pos: "n", meaning: "sự tuân thủ; nghi thức" }, { word: "observant", pos: "adj", meaning: "tinh mắt; tuân thủ" }, { word: "observably", pos: "adv", meaning: "có thể quan sát được" }],
     example: "The company observes strict standards regarding environmental protection.",
     exampleVi: "Công ty tuân thủ các tiêu chuẩn nghiêm ngặt về bảo vệ môi trường.",
     phrases: [
@@ -383,7 +383,7 @@ const DAY_VOCAB = [
     phonetic: "/ˌpɪəriˈɒdɪk/",
     pos: "adj",
     meaning: "định kỳ",
-    related: ["period", "periodical", "periodically"],
+    related: [{ word: "period", pos: "n", meaning: "thời kỳ; dấu chấm" }, { word: "periodical", pos: "n/adj", meaning: "tạp chí; theo kỳ" }, { word: "periodically", pos: "adv", meaning: "một cách định kỳ" }],
     example: "Periodic replacement of the filtering cartridge is all that is necessary.",
     exampleVi: "Thay thế định kỳ ống lọc là tất cả những gì cần thiết.",
     phrases: [
@@ -411,7 +411,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈtektɪv/",
     pos: "adj",
     meaning: "có tính bảo vệ",
-    related: ["protect", "protection"],
+    related: [{ word: "protect", pos: "v", meaning: "bảo vệ" }, { word: "protection", pos: "n", meaning: "sự bảo vệ" }],
     example: "Workers are cautioned against entering the laboratory without protective clothing and masks.",
     exampleVi: "Người lao động được cảnh báo không được vào phòng thí nghiệm mà không có quần áo bảo hộ và mặt nạ.",
     phrases: [
@@ -466,7 +466,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈsiːkwəns/",
     pos: "n",
     meaning: "trình tự",
-    related: ["sequent", "sequential"],
+    related: [{ word: "sequent", pos: "adj", meaning: "tiếp theo" }, { word: "sequential", pos: "adj", meaning: "theo thứ tự" }],
     example: "To set up the equipment properly, the proper sequence of steps must be followed.",
     exampleVi: "Để thiết lập các thiết bị đúng cách, phải tuân theo đúng trình tự các bước.",
     phrases: [],
@@ -477,7 +477,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈsɪstənsi/",
     pos: "n",
     meaning: "tính nhất quán",
-    related: ["consistent"],
+    related: [{ word: "consistent", pos: "adj", meaning: "nhất quán" }],
     example: "The quality control team ensures consistency in the quality of our products.",
     exampleVi: "Đội kiểm soát chất lượng đảm bảo sự nhất quán về chất lượng sản phẩm của chúng tôi.",
     phrases: [
@@ -490,7 +490,7 @@ const DAY_VOCAB = [
     phonetic: "/əbˈstrʌkʃn/",
     pos: "n",
     meaning: "sự tắc nghẽn; vật cản",
-    related: ["obstruct", "obstructive"],
+    related: [{ word: "obstruct", pos: "v", meaning: "làm trở ngại; cản trở" }, { word: "obstructive", pos: "adj", meaning: "cản trở" }],
     example: "Please make sure all production floor pathways are clear of obstructions.",
     exampleVi: "Hãy chắc chắn rằng tất cả các lối đi tầng sản xuất đều không có vật cản.",
     phrases: [],
@@ -501,7 +501,7 @@ const DAY_VOCAB = [
     phonetic: "/prɪˈkɔːʃn/",
     pos: "n",
     meaning: "sự đề phòng",
-    related: ["precautious", "precautionary"],
+    related: [{ word: "precautious", pos: "adj", meaning: "thận trọng" }, { word: "precautionary", pos: "adj", meaning: "phòng ngừa" }],
     example: "You will have to take some extra precautions to prevent accidents.",
     exampleVi: "Bạn sẽ phải sử dụng một số biện pháp phòng ngừa để ngăn ngừa tai nạn.",
     phrases: [
@@ -515,7 +515,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈstriːmlaɪn/",
     pos: "v",
     meaning: "tinh giản",
-    related: ["streamlined"],
+    related: [{ word: "streamlined", pos: "adj", meaning: "được tối ưu hóa" }],
     example: "There are many products that help small-business owners streamline their projects.",
     exampleVi: "Có nhiều sản phẩm giúp các chủ doanh nghiệp nhỏ tinh giản dự án của họ.",
     phrases: [

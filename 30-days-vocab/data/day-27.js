@@ -34,7 +34,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈpruːv/",
     pos: "v",
     meaning: "chấp thuận",
-    related: ["approval", "approving", "approved", "approvingly"],
+    related: [{ word: "approval", pos: "n", meaning: "sự chấp thuận" }, { word: "approving", pos: "adj", meaning: "tán thành" }, { word: "approved", pos: "adj", meaning: "được chấp thuận" }, { word: "approvingly", pos: "adv", meaning: "một cách tán thành" }],
     example: "The purchasing office has approved a purchase order for a new copy machine.",
     exampleVi: "Văn phòng mua hàng đã chấp thuận đơn mua hàng là một máy photo mới.",
     phrases: [
@@ -80,7 +80,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈeksələns/",
     pos: "n",
     meaning: "sự xuất sắc",
-    related: ["excellent", "excel"],
+    related: [{ word: "excellent", pos: "adj", meaning: "xuất sắc" }, { word: "excel", pos: "v", meaning: "xuất sắc" }],
     example: "Five accounting firms have received the Barstow Award for excellence in customer service.",
     exampleVi: "Năm công ty kế toán đã nhận được giải thưởng Barstow vì sự xuất sắc trong dịch vụ chăm sóc khách hàng.",
     phrases: [
@@ -94,7 +94,7 @@ const DAY_VOCAB = [
     phonetic: "/ɪkˈspens/",
     pos: "n",
     meaning: "kinh phí",
-    related: ["expend", "expensive"],
+    related: [{ word: "expend", pos: "v", meaning: "chi tiêu" }, { word: "expensive", pos: "adj", meaning: "đắt tiền" }],
     example: "All receipts for travel expenses should be submitted to Mr. Franconi.",
     exampleVi: "Tất cả hóa đơn của phí công tác phải được nộp cho ông Franconi.",
     phrases: [
@@ -167,7 +167,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈpeɪmənt/",
     pos: "n",
     meaning: "sự thanh toán",
-    related: ["pay", "paid"],
+    related: [{ word: "pay", pos: "n/v", meaning: "trả tiền; lương" }, { word: "paid", pos: "adj", meaning: "đã trả" }],
     example: "Payment is expected at the time you check out of the conference center.",
     exampleVi: "Thanh toán dự kiến vào thời điểm bạn trả phòng ở trung tâm hội nghị.",
     phrases: [
@@ -184,7 +184,7 @@ const DAY_VOCAB = [
     phonetic: "/pəˈsweɪd/",
     pos: "v",
     meaning: "thuyết phục",
-    related: ["persuasive", "persuasion"],
+    related: [{ word: "persuasive", pos: "adj", meaning: "có tính thuyết phục" }, { word: "persuasion", pos: "n", meaning: "sự thuyết phục" }],
     example: "I hope we can persuade the managers that we can save money by changing shipping companies.",
     exampleVi: "Tôi hy vọng chúng ta có thể thuyết phục các nhà quản lý rằng chúng ta có thể tiết kiệm tiền bằng cách đổi công ty chuyển hàng.",
     phrases: [],
@@ -195,7 +195,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈpəʊzl/",
     pos: "n",
     meaning: "đề xuất",
-    related: ["propose", "proposed"],
+    related: [{ word: "propose", pos: "v", meaning: "đề xuất" }, { word: "proposed", pos: "adj", meaning: "được đề xuất" }],
     example: "The board of directors asked for the budget proposal for next year.",
     exampleVi: "Ban giám đốc yêu cầu đề xuất ngân sách cho năm tới.",
     phrases: [
@@ -226,7 +226,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈriːsnt/",
     pos: "adj",
     meaning: "gần đây",
-    related: ["recently"],
+    related: [{ word: "recently", pos: "adv", meaning: "gần đây" }],
     example: "Mr. Kensington has already filed the expense report for his recent trip to Hong Kong.",
     exampleVi: "Ông Kensington đã nộp báo cáo công tác phí cho chuyến đi gần đây của ông ấy tới Hồng Kông.",
     phrases: [
@@ -240,7 +240,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈmeɪn/",
     pos: "v",
     meaning: "còn lại; vẫn còn",
-    related: ["remainder"],
+    related: [{ word: "remainder", pos: "n", meaning: "phần còn lại" }],
     example: "The library has $4,300 remaining in this year's budget.",
     exampleVi: "Thư viện có 4300 đô la còn lại trong ngân sách năm nay.",
     phrases: [
@@ -255,7 +255,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈmuːv/",
     pos: "v",
     meaning: "loại bỏ; tháo, lấy ra",
-    related: ["removal", "remover", "removable"],
+    related: [{ word: "removal", pos: "n", meaning: "sự loại bỏ" }, { word: "remover", pos: "n", meaning: "chất tẩy rửa; người loại bỏ" }, { word: "removable", pos: "adj", meaning: "có thể tháo ra được" }],
     example: "Elena Torres was asked to identify ways to remove unnecessary expenses from the budget.",
     exampleVi: "Elena Torres đã được yêu cầu xác định cách để loại bỏ các chi phí không cần thiết khỏi ngân sách.",
     phrases: [],
@@ -266,7 +266,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈdʒʌstmənt/",
     pos: "n",
     meaning: "sự điều chỉnh",
-    related: ["adjust", "adjustable", "adjustably"],
+    related: [{ word: "adjust", pos: "v", meaning: "điều chỉnh" }, { word: "adjustable", pos: "adj", meaning: "điều chỉnh được" }, { word: "adjustably", pos: "adv", meaning: "có thể điều chỉnh" }],
     example: "The head of finance asked for some adjustments to the budget proposal.",
     exampleVi: "Trưởng phòng tài chính yêu cầu một số điều chỉnh đối với bảng đề xuất ngân sách.",
     phrases: [],
@@ -277,7 +277,7 @@ const DAY_VOCAB = [
     phonetic: "/əˈveɪləbl/",
     pos: "adj",
     meaning: "có sẵn",
-    related: ["availability"],
+    related: [{ word: "availability", pos: "n", meaning: "sự sẵn có" }],
     example: "The full report on the company's budget will not be available until the end of the week.",
     exampleVi: "Báo cáo đầy đủ về ngân sách của công ty sẽ không sẵn có cho đến cuối tuần.",
     phrases: [
@@ -305,7 +305,7 @@ const DAY_VOCAB = [
     phonetic: "/dɪˈdʌkt/",
     pos: "v",
     meaning: "khấu trừ",
-    related: ["deduction"],
+    related: [{ word: "deduction", pos: "n", meaning: "sự khấu trừ; suy luận" }],
     example: "In most cases, employers will deduct income tax from their employees' salaries.",
     exampleVi: "Trong phần lớn trường hợp, chủ lao động sẽ khấu trừ thuế thu nhập vào tiền lương của nhân viên.",
     phrases: [
@@ -318,7 +318,7 @@ const DAY_VOCAB = [
     phonetic: "/drəˈmætɪk/",
     pos: "adj",
     meaning: "rõ rệt (tăng); kịch",
-    related: ["dramatically"],
+    related: [{ word: "dramatically", pos: "adv", meaning: "một cách đáng kể" }],
     example: "Sales of the Flame have been increasing at a dramatic rate since its release.",
     exampleVi: "Doanh thu của Flame đã tăng lên rõ rệt kể từ khi nó phát hành.",
     phrases: [
@@ -372,7 +372,7 @@ const DAY_VOCAB = [
     phonetic: "/pɔː/",
     pos: "adj",
     meaning: "nghèo; tệ (chất lượng)",
-    related: ["poverty", "poorly"],
+    related: [{ word: "poverty", pos: "n", meaning: "nghèo đói" }, { word: "poorly", pos: "adv", meaning: "một cách kém; ốm yếu" }],
     example: "Dresch Tools has stopped production of its battery-operated drill following poor sales.",
     exampleVi: "Công ty công cụ Dresch đã ngừng sản xuất máy khoan chạy bằng pin sau khi doanh số bán hàng kém.",
     phrases: [
@@ -386,7 +386,7 @@ const DAY_VOCAB = [
     phonetic: "/prəˈsiːdʒə/",
     pos: "n",
     meaning: "thủ tục",
-    related: ["procedural"],
+    related: [{ word: "procedural", pos: "adj", meaning: "theo thủ tục" }],
     example: "The manager will discuss a change in accounting procedures.",
     exampleVi: "Người quản lý sẽ thảo luận về một thay đổi trong các thủ tục kế toán.",
     phrases: [
@@ -401,7 +401,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈprɒfɪtəbl/",
     pos: "adj",
     meaning: "có lợi nhuận",
-    related: ["profitability", "profit"],
+    related: [{ word: "profitability", pos: "n", meaning: "khả năng sinh lời" }, { word: "profit", pos: "n", meaning: "lợi nhuận" }],
     example: "Although the company has been in business for only a year, it has quickly become profitable.",
     exampleVi: "Mặc dù công ty mới kinh doanh được một năm, nó đã nhanh chóng có lợi nhuận.",
     phrases: [],
@@ -412,7 +412,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈreləvənt/",
     pos: "adj",
     meaning: "thích hợp; có liên quan",
-    related: ["relevance", "relevantly"],
+    related: [{ word: "relevance", pos: "n", meaning: "sự liên quan" }, { word: "relevantly", pos: "adv", meaning: "một cách có liên quan" }],
     example: "Please include all relevant receipts with your official request to receive expense reimbursement.",
     exampleVi: "Vui lòng đính kèm tất cả hóa đơn có liên quan với đơn chính thức của bạn để nhận hoàn công tác phí.",
     phrases: [
@@ -425,7 +425,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈmɪt/",
     pos: "v",
     meaning: "gửi thanh toán",
-    related: ["remittance"],
+    related: [{ word: "remittance", pos: "n", meaning: "tiền gửi" }],
     example: "Please remit payment before the end of the month.",
     exampleVi: "Vui lòng chuyển thanh toán trước cuối tháng.",
     phrases: [
@@ -438,7 +438,7 @@ const DAY_VOCAB = [
     phonetic: "/rɪˈvɪʒn/",
     pos: "n",
     meaning: "sự chỉnh sửa",
-    related: ["revise"],
+    related: [{ word: "revise", pos: "v", meaning: "sửa đổi; ôn tập" }],
     example: "I had my assistant check the figures so I can send the revision over to you this afternoon.",
     exampleVi: "Tôi đã nhờ trợ lý kiểm tra số liệu để tôi có thể gửi bản chỉnh sửa cho bạn chiều nay.",
     phrases: [
@@ -452,7 +452,7 @@ const DAY_VOCAB = [
     phonetic: "/stəˈtɪstɪks/",
     pos: "n",
     meaning: "số liệu thống kê",
-    related: ["statistical", "statistically"],
+    related: [{ word: "statistical", pos: "adj", meaning: "thống kê" }, { word: "statistically", pos: "adv", meaning: "theo thống kê" }],
     example: "Ms. Lee included statistics to support her market research report.",
     exampleVi: "Bà Lee đã đưa số liệu thống kê vào để hỗ trợ báo cáo nghiên cứu thị trường của bà.",
     phrases: [],
@@ -463,7 +463,7 @@ const DAY_VOCAB = [
     phonetic: "/ˈstedɪli/",
     pos: "adv",
     meaning: "đều đặn",
-    related: ["steady"],
+    related: [{ word: "steady", pos: "adj/v", meaning: "ổn định; làm ổn định" }],
     example: "Sales of Fonseca electronic equipment have been increasing steadily over the past five years.",
     exampleVi: "Doanh số bán hàng thiết bị điện tử của Fonseca đã tăng lên đều đặn trong năm năm qua.",
     phrases: [
@@ -491,7 +491,7 @@ const DAY_VOCAB = [
     phonetic: "/wɪðˈdrɔːəl/",
     pos: "n",
     meaning: "sự rút (tiền)",
-    related: ["withdraw"],
+    related: [{ word: "withdraw", pos: "v", meaning: "rút (tiền); rút lại" }],
     example: "Customers can consent to automatic withdrawals by completing this form.",
     exampleVi: "Khách hàng có thể bằng lòng rút tiền tự động bằng cách điền vào mẫu đơn này.",
     phrases: [
@@ -504,7 +504,7 @@ const DAY_VOCAB = [
     phonetic: "/kənˈstreɪnt/",
     pos: "n",
     meaning: "hạn chế",
-    related: ["constrain"],
+    related: [{ word: "constrain", pos: "v", meaning: "hạn chế" }],
     example: "Despite budget constraints, all full-time employees will receive a 3 percent salary increase.",
     exampleVi: "Mặc dù hạn chế ngân sách, tất cả nhân viên toàn thời gian sẽ được tăng lương 3 phần trăm.",
     phrases: [
