@@ -28,6 +28,10 @@
     <div class="vocab-list" id="vocabList"></div>
   </div>
 
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Lên đầu trang" title="Lên đầu trang">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
   <script src="data/topics.js"></script>
   <script>
     const params  = new URLSearchParams(window.location.search);
@@ -121,6 +125,15 @@
       list.innerHTML = '<p style="color:#6b7a8d;padding:32px 0;text-align:center;">Dữ liệu từ vựng cho ngày này chưa được cập nhật.</p>';
     }
     } // end renderPage
+
+    // ---- SCROLL TO TOP ----
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 200);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>
